@@ -62,7 +62,10 @@ def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
     cities = city_year_info[0]
     if cities == ['all']:
       cities = list(prefecture_pd['英語名'].values)
-    return cities, city_year_info[1], city_year_info[2]
+    years = city_year_info[1]
+    if type(years) is not str:
+        years = str(years)
+    return cities, years, city_year_info[2]
   def getPrefectureInfo(city_name):
     prefecture_pd_line = prefecture_pd.query('英語名 == "' + city_name + '"')
     prefecture_code = prefecture_pd_line['コード'].values[0]
