@@ -38,7 +38,7 @@ def loadPdDic(root):
 def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
        merge_method, verbose=1):
   def SelectHeatStrokeDataByPrefectureCode(pref_code, year):
-    query_message = "都道府県コード == " + pref_code
+    query_message = "都道府県コード == " + str(pref_code)
     return heatstroke_pd_dic[year].query(query_message)
   def SelectWeatherDataByPrefectureNameAndMonth(prefecture_name, month = [5, 9]):
     def selectByMonth(month, data):
