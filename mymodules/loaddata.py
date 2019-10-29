@@ -30,9 +30,9 @@ def loadPdDic(root):
   pref_pd['コード'] = pref_pd['コード'].astype('int16')
   pref_pd['人口'] = pref_pd['人口'].apply(lambda x: x.replace(',',''))
   pref_pd['人口'] = pref_pd['人口'].astype('int64')
-  print('loaded population and code', list(prefecture_pd.columns))
+  print('loaded population and code', list(pref_pd.columns))
 
-  return heatstroke_pd_dic, weather_pd_dic, prefecture_pd
+  return heatstroke_pd_dic, weather_pd_dic, pref_pd
 
 
 def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
