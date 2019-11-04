@@ -3,9 +3,9 @@ import pandas as pd
 import glob
 import re
 
-def loadPdDic(root):
+def loadPdDic(root_path):
   # 熱中症患者のデータ
-  heatstroke_path_list = glob.glob(root + 'heatstroke*.csv')
+  heatstroke_path_list = glob.glob(root_path + 'heatstroke*.csv')
   heatstroke_pd_dic = {}
   for path in heatstroke_path_list:
     # -8 : -4  ~/heatstroke2018.csv
@@ -14,16 +14,16 @@ def loadPdDic(root):
 
   # 気象データ
   weather_pd_dic = {} 
-  prefecture_path_list = glob.glob(root + 'weather-*.csv')
+  prefecture_path_list = glob.glob(root_path + 'weather-*.csv')
   for prefecture_path in prefecture_path_list:
     name = re.search(r'weather-\w+', prefecture_path).group()[8:]
     weather_pd_dic[name] = pd.read_csv(prefecture_path, encoding='utf-8')
   print('loaded weather', list(weather_pd_dic.keys()))
   
   # 人口関係
-  pref_code_pd = pd.read_csv(root + 'code.csv', encoding='utf-8')
+  pref_code_pd = pd.read_csv(root_path + 'code.csv', encoding='utf-8')
   pref_code_pd = pref_code_pd.loc[:,['県名', 'コード', '英語名']]
-  population_pd = pd.read_csv(root + 'population.csv', encoding='utf-8')
+  population_pd = pd.read_csv(root_path + 'population.csv', encoding='utf-8')
 
   pref_pd = pd.merge(pref_code_pd, population_pd, on='県名')
   pref_pd = pref_pd.drop('県名', axis=1)
