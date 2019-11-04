@@ -34,6 +34,8 @@ def loadPdDic(root_path):
 
   return heatstroke_pd_dic, weather_pd_dic, pref_pd
 
+def convertWeatherOverView(weather_data):
+    pass
 
 def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
        merge_method, verbose=1):
