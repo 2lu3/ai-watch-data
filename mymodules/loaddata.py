@@ -13,7 +13,7 @@ def loadPdDic(root_path):
   print('loaded heatstroke ', list(heatstroke_pd_dic.keys()))
 
   # 気象データ
-  weather_pd_dic = {} 
+  weather_pd_dic = {}
   prefecture_path_list = glob.glob(root_path + 'weather-*.csv')
   for prefecture_path in prefecture_path_list:
     name = re.search(r'weather-\w+', prefecture_path).group()[8:]
@@ -40,11 +40,12 @@ def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
   def SelectHeatStrokeDataByPrefectureCode(pref_code, year):
     query_message = "都道府県コード == " + str(pref_code)
     return heatstroke_pd_dic[year].query(query_message)
-  def SelectWeatherDataByPrefectureNameAndMonth(prefecture_name, month = [5, 9]):
+  def SelectWeatherDataByPrefectureNameAndMonth(prefecture_name, month=[5, 9]):
     def selectByMonth(month, data):
       def convertDate2MonthNumber(date):
         return pd.to_datetime(date).month
-      data = data[(data['日付'].map(convertDate2MonthNumber) >= month[0]) & (data['日付'].map(convertDate2MonthNumber) <= month[1])]
+      data = data[(data['日付'].map(convertDate2MonthNumber) >= month[0]) &
+              (data['日付'].map(convertDate2MonthNumber) <= month[1])]
       return data
     weather_pd = weather_pd_dic[prefecture_name]
     weather_pd = selectByMonth(month, weather_pd)
@@ -63,7 +64,9 @@ def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
     if cities == ['all']:
       cities = list(prefecture_pd['英語名'].values)
     years = city_year_info[1]
-    years = [years[i] if type(years[i]) is str else str(years[i]) for i in range(len(years))]
+    for i in range(len(years)):
+        if type(years[i]) is not str:
+            years[i] = str(years[i])
     return cities, years, city_year_info[2]
   def getPrefectureInfo(city_name):
     prefecture_pd_line = prefecture_pd.query('英語名 == "' + city_name + '"')
@@ -79,7 +82,7 @@ def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
     for city in cities:
       if city not in weather_pd_dic.keys():
         continue
-      
+
       weather_pd = SelectWeatherDataByPrefectureNameAndMonth(city, month)
 
       prefecture_code, prefecture_population = getPrefectureInfo(city)
@@ -98,7 +101,7 @@ def createDataSet(heatstroke_pd_dic, weather_pd_dic, prefecture_pd,
       data_pd = mergeWeatherPdAndHeatstrokePd(heatstroke_pd, weather_pd)
       data_pd_list.append(data_pd)
   data_pd = mergePdList(data_pd_list)
-  
+
   if verbose > 0:
     print(data_pd.info())
 
