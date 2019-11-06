@@ -1,8 +1,8 @@
-import loaddata
+from loaddata import loadPdDic, createDataSet
 
 class Dataset():
-    def __init__(self, option=None, root_dir='ai-watch-data/'):
-        self.heatstroke_dic, self.weather_dic, self.prefecture_pd = loaddata.loadPdDic(root_dir)
+    def __init__(self, option=None, root='ai-watch-data/'):
+        self.heat_dic, self.weather_dic, self.pref_pd = loadPdDic(root)
 
         if option is None:
             option = [
@@ -19,26 +19,16 @@ class Dataset():
         else:
             option = self.option[data_type_number]
         if self.datasets[data_type_number] is None:
-            print(loaddata.createDataSet(
-                    self.heatstroke_dic,
+            self.datasets[data_type_number] = createDataSet(
+                    self.heat_dic,
                     self.weather_dic,
-                    self.prefecture_pd,
-                    option,
-                    verbose=0))
-
-            self.datasets[data_type_number] = loaddata.createDataSet(
-                    self.heatstroke_dic,
-                    self.weather_dic,
-                    self.prefecture_pd,
+                    self.pref_pd,
                     option,
                     verbose=0)
         return self.datasets[data_type_number].copy()
 
 
     def get_train(self, option=None):
-        print(self.heatstroke_dic)
-        print(self.weather_dic)
-        print(self.prefecture_pd)
         return self.get_dataset(0, option)
     def get_valid(self, option=None):
         return self.get_dataset(1, option)
