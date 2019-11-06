@@ -19,6 +19,13 @@ class Dataset():
         else:
             option = self.option[data_type_number]
         if self.datasets[data_type_number] is None:
+            print(loaddata.createDataSet(
+                    self.heatstroke_dic,
+                    self.weather_dic,
+                    self.prefecture_pd,
+                    option,
+                    verbose=0))
+
             self.datasets[data_type_number] = loaddata.createDataSet(
                     self.heatstroke_dic,
                     self.weather_dic,
