@@ -4,9 +4,6 @@ class Dataset():
     def __init__(self, option=None, root_dir='ai-watch-data/'):
         self.heatstroke_dic, self.weather_dic, self.prefecture_pd = loaddata.loadPdDic(root_dir)
 
-        print(self.heatsroke_dic)
-        print(self.weather_dic)
-        print(self.prefecture_pd)
 
         if option is None:
             option = [
@@ -40,6 +37,9 @@ class Dataset():
 
 
     def get_train(self, option=None):
+        print(self.heatsroke_dic)
+        print(self.weather_dic)
+        print(self.prefecture_pd)
         return self.get_dataset(0, option)
     def get_valid(self, option=None):
         return self.get_dataset(1, option)
