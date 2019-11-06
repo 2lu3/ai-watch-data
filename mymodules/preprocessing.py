@@ -93,9 +93,9 @@ def Preprocessing(datasets_origin, verbose, convert, option):
   def convertDataRange(datasets):
     # 1つのpandasを標準化
     def standardizationData(data, data_std = None, data_mean = None):
-      if data_std == None:
+      if data_std is None:
         data_std = data.std(ddof=False)
-      if data_mean == None:
+      if data_mean is None:
         data_mean = data.mean()
       return (data - data_mean) / data_std
     # 複数のpandasをまとめて加工
