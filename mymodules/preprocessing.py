@@ -66,14 +66,14 @@ def Preprocessing(datasets_origin, verbose, convert, option):
     # 曜日をone-hotで追加
     if option['add_onehot_day'] == True:
       data_pd = convertDate2OneHotWeekDay(data_pd)
-    
+
     # いらないパラメーターの削除
     drop_list_weather = option['drop_list_weather']
     drop_list_injury = option['drop_list_injury']
     drop_list_years = option['drop_list_years']
     drop_list_place = option['drop_list_place']
     drop_list_others = option['drop_list_others']
- 
+
     drop_list_injury = ['傷病程度：' + drop_injury for drop_injury in drop_list_injury]
     drop_list_years = ['年齢区分：' + drop_years for drop_years in drop_list_years]
     drop_list_place = ['発生場所：' + drop_place for drop_place in drop_list_place]
@@ -118,7 +118,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
       for i in range(len(datasets)):
         if convert_name in datasets[i].columns:
           datasets[i][convert_name] = standardizationData(datasets[i][convert_name], data_std, data_mean)
-    
+
     # 正規化
     normalization_name_list = ['人口', '降水量']
     for convert_label in normalization_name_list:
@@ -146,7 +146,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
   # 標準化・正規化
   if option['convert_data_range'] == True:
     datasets = convertDataRange(datasets)
-  
+
   # データを整理
   # drop: indexをデータに挿入しない
   datasets = [datasets[i].reset_index(drop=True) for i in range(len(datasets))]

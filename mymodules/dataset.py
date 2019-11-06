@@ -11,30 +11,30 @@ class Dataset():
                     [[['tokyo'], [2018], [5,9]]]
                     ]
         self.option = option
-
-
-
-    def get_train(self):
-        return loaddata.createDataSet(
+        train_data = loaddata.createDataSet(
                 self.heatstroke_dic,
                 self.weather_dic,
                 self.prefecture_pd,
                 self.option[0],
                 verbose=0)
-
-    def get_valid(self):
-        return loaddata.createDataSet(
+        valid_data = loaddata.createDataSet(
                 self.heatstroke_dic,
                 self.weather_dic,
                 self.prefecture_pd,
                 self.option[1],
                 verbose=0)
 
-    def get_test(self):
-        return loaddata.createDataSet(
+        test_dat = loaddata.createDataSet(
                 self.heatstroke_dic,
                 self.weather_dic,
                 self.prefecture_pd,
                 self.option[2],
                 verbose=0)
 
+
+    def get_train(self):
+        return train_data.copy()
+    def get_valid(self):
+        return valid_data.copy()
+    def get_test(self):
+        return test_data.copy()
