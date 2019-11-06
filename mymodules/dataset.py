@@ -4,7 +4,6 @@ class Dataset():
     def __init__(self, option=None, root_dir='ai-watch-data/'):
         self.heatstroke_dic, self.weather_dic, self.prefecture_pd = loaddata.loadPdDic(root_dir)
 
-
         if option is None:
             option = [
                     [[['tokyo'], [i for i in range(2008, 2017)], [5, 9]]],
@@ -37,7 +36,7 @@ class Dataset():
 
 
     def get_train(self, option=None):
-        print(self.heatsroke_dic)
+        print(self.heatstroke_dic)
         print(self.weather_dic)
         print(self.prefecture_pd)
         return self.get_dataset(0, option)
