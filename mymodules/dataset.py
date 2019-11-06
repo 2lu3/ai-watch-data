@@ -4,6 +4,10 @@ class Dataset():
     def __init__(self, option=None, root_dir='ai-watch-data/'):
         self.heatstroke_dic, self.weather_dic, self.prefecture_pd = loaddata.loadPdDic(root_dir)
 
+        print(self.heatsroke_dic)
+        print(self.weather_dic)
+        print(self.prefecture_pd)
+
         if option is None:
             option = [
                     [[['tokyo'], [i for i in range(2008, 2017)], [5, 9]]],
