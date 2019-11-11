@@ -44,4 +44,4 @@ class CalculateF1Score:
     return sum([self.class_recall(i) for i in range(self.class_num)]) / (self.class_num + self.epsilon)
 
   def macro_f_measure(self):
-    return sum([self.class_f_measure(i) for i in range(self.class_num)]) / (self.class_num + self.epsilon)Î
+    return sum([self.class_f_measure(i) for i in range(self.class_num)]) / (self.class_num + self.epsilon)
