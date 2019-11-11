@@ -49,7 +49,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
     for name in data_columns:
       if name == '日付':
         continue
-      data['p'+name] = data_origin[name].copy().shift(-1)
+      data['p'+name] = data[name].copy().shift(-1)
     return data
   def splitY(Y_np, split_num, dimension):
     convert_Y_np = Y_np.copy() 
