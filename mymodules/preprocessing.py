@@ -45,11 +45,12 @@ def Preprocessing(datasets_origin, verbose, convert, option):
       return data
   def addPreviousDayWeatherData(data):
     # 日付以外のすべてのカラムのコピーを作成
-    data_origin = data.copy()
-    for name in data_origin.columns:
+    data_columns = data.columns
+    for name in data_columns:
       if name == '日付':
         continue
       data['p'+name] = data_origin[name].copy().shift(-1)
+    return data
   def splitY(Y_np, split_num, dimension):
     convert_Y_np = Y_np.copy() 
     if dimension == 1:
