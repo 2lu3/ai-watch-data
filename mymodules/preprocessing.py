@@ -46,7 +46,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
   def addPreviousDayWeatherData(data):
     # 日付以外のすべてのカラムのコピーを作成
     data_origin = data.copy()
-    for name in .columns:
+    for name in data_origin.columns:
       if name == '日付':
         continue
       data['p'+name] = data_origin[name].copy().shift(-1)
