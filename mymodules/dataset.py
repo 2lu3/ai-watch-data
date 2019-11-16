@@ -34,7 +34,7 @@ class Dataset():
         return self.get_dataset(1, option)
     def get_test(self, option=None):
         return self.get_dataset(2, option)
-    def get_dataset(self, option)
+    def get_dataset(self, option):
         return createDataSet(
             self.heat_dic,
             self.weather_dic,
