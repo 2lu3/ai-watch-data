@@ -30,7 +30,16 @@ class Dataset():
 
     def get_train(self, option=None):
         return self.get_dataset(0, option)
+
     def get_valid(self, option=None):
         return self.get_dataset(1, option)
+
     def get_test(self, option=None):
         return self.get_dataset(2, option)
+
+    def create_feature(self):
+        pass
+    def run(self):
+        pass
+    def save(self):
+        pass
