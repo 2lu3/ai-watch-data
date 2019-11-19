@@ -15,9 +15,11 @@ class Runner:
     self.features = features
     self.params = params
     if n_hold is None:
-      self.n_hold = [[y] for y in range(2008, 2019)]
+      self.n_hold = 5
+    self.dataset_cls = Dataset()
 
-  def train_fold(self, i_fold: Union[int, list]) -> Tuple[
+
+  def train_fold(self, i_fold: Union[str, int]) -> Tuple[
       Model, Optional[np.array], Optional[np.array], Optional[float]]:
     """ クロスバリデーションでのfoldを指定して学習・評価を行う
 
@@ -32,8 +34,13 @@ class Runner:
 
     if validation:
       # 学習データ・バリデーションデータをセットする
-      tr_idx, va_idx = self.load_index_fold(i_fold)
-      tr_x, tr_y = 
+
+      va_idx = [2008 + i_fold * 2, 2009 + i_fold * 2]
+      tr_idx = [y for y in range(2008, 2018)].remove(va_idx)
+
+      va_data = 
+
+
 
 
 
