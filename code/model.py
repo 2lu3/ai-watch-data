@@ -1,7 +1,7 @@
-from abc import ABCMeta
+from abc import ABCMeta, abstractmethod
 import numpy as np
 import pandas as pd
-from tying import Optional
+from typing import Optional
 
 # 学習・予測・モデルの保存/読み込み
 class Model(metaclass=ABCMeta):

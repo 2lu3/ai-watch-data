@@ -1,3 +1,9 @@
+from typing import Callable, List, Optional, Tuple, Union
+from model import Model
+from dataset import Dataset
+import numpy as np
+
+
 # クロスバリデーションを含めた学習・評価・予測
 class Runner:
 
@@ -13,10 +19,10 @@ class Runner:
     self.run_name = run_name
     self.model_cls = model_cls
     self.features = features
-    self.params = params
+    self.params = prms
     if n_hold is None:
       self.n_hold = 5
-    self.dataset_cls = Dataset()
+    self.dataset = Dataset(self.features)
 
 
   def train_fold(self, i_fold: Union[str, int]) -> Tuple[
@@ -36,13 +42,14 @@ class Runner:
       # 学習データ・バリデーションデータをセットする
 
       va_idx = [2008 + i_fold * 2, 2009 + i_fold * 2]
-      tr_idx = [y for y in range(2008, 2018)].remove(va_idx)
+      print('val', va_idx)
+      tr_idx = [y for y in range(2008, 2018)]
+      for idx in va_idx:
+        tr_idx.remove(idx)
+      print('trn', tr_idx)
 
-      va_data = 
-
-
-
-
+      va_data = self.dataset.get_data(va_idx, 'tokyo')
+      tr_data = self.dataset.get_data(tr_idx, 'tokyo')
 
 
   def run_train_fold(i_fold):
