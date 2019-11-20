@@ -51,6 +51,10 @@ class Runner:
       va_data = self.dataset.get_data(va_idx, 'tokyo')
       tr_data = self.dataset.get_data(tr_idx, 'tokyo')
 
+      tr_Y = tr_data['target']
+      tr_X = tr_data.drop('target', axis=1)
+      va_Y = va_data['target']
+      va_X = va-data.drop('target', axis=1)
 
   def run_train_fold(i_fold):
     pass
