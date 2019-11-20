@@ -1,25 +1,31 @@
 from model import Model
+from util import Util
 import lightgbm as lgb
 import os
 
 class ModelLGBM(Model):
   def train(self, tr_X, tr_Y, va_X=None, va_Y=None):
-    validation = va_x is not None
+    validation = va_X is not None
     dtrain = lgb.Dataset(tr_X, label=tr_Y)
     if validation:
       dvalid = lgb.Dataset(va_X, label=va_Y, reference=dtrain)
 
-    params = dict(self.params)
+    params = dict(self.prms)
     num_round = params.pop('num_round')
 
     # 学習
     if validation:
       early_stopping_rounds = params.pop('early_stopping_rounds')
+      if 'verbose_eval' in params:
+        verbose_eval = params.pop('verbose_eval')
+      else:
+        verbose_eval = 1
       self.model = lgb.train(
           params,
           dtrain,
           num_boost_round=num_round,
           valid_sets=dvalid,
+          verbose_eval=verbose_eval,
           early_stopping_rounds=early_stopping_rounds)
     else:
       self.model = lgb.train(params, dtrain)
