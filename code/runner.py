@@ -4,6 +4,7 @@ from sklearn.metrics import mean_absolute_error
 from model import Model
 from dataset import Dataset
 from util import Util, Logger
+import pandas as pd
 
 logger = Logger()
 
@@ -11,7 +12,7 @@ logger = Logger()
 class Runner:
 
   def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model],
-      features: List[str], prms: dict, n_hold=None):
+      features: List[str], train_years: list, test_years, prms: dict, n_fold=None):
     """ コンストラクタ
 
     :param run_name: ランの名前
@@ -22,9 +23,11 @@ class Runner:
     self.run_name = run_name
     self.model_cls = model_cls
     self.features = features
+    self.train_years = train_years
     self.params = prms
-    if n_hold is None:
-      self.n_hold = 5
+    if n_fold is None:
+      n_fold = len(self.train_years)
+    self.n_fold = n_fold
     self.dataset = Dataset(self.features)
 
 
@@ -44,10 +47,11 @@ class Runner:
     if validation:
       # 学習データ・バリデーションデータをセットする
 
-      va_idx = [2008 + i_fold * 2, 2009 + i_fold * 2]
-      tr_idx = [y for y in range(2008, 2018)]
-      for idx in va_idx:
-        tr_idx.remove(idx)
+      va_idx = self.train_years[i_fold]
+      tr_idx = self.train_years.copy()
+      tr_idx.remove(va_idx)
+      # 1次元配列に
+      tr_idx = sum(tr_idx, [])
 
       va_data = self.dataset.get_data(va_idx, 'tokyo')
       tr_data = self.dataset.get_data(tr_idx, 'tokyo')
@@ -75,7 +79,7 @@ class Runner:
       model.train(train_x, train_y)
       return model, None, None, None
 
-  def run_train_cv(self):
+  def run_train_cv(self) -> None:
     """ cvでの学習・評価を行う
 
     学習・評価とともに、各foldのモデルの保存、スコアのログ出力についても行う
@@ -87,7 +91,9 @@ class Runner:
     preds = []
 
     # 各foldで学習を行う
-    for i_fold in range(self.n_hold):
+    print(type(self.n_fold))
+    print(self.n_fold)
+    for i_fold in range(self.n_fold):
       logger.info(f'{self.run_name} fold {i_fold} - start training')
       model, va_idx, va_pred, score = self.train_fold(i_fold)
       logger.info(f'{self.run_name} fold {i_fold} - end training - score {score}')
@@ -112,16 +118,21 @@ class Runner:
     # 評価結果の保存
     logger.result_scores(self.run_name, scores)
 
-  def run_predict_cv(selu):
+    logger.info(f'{self.run_name} - end training cv')
+
+  def get_predict_cv(self) -> [np.array, pd.DataFrame]:
     """ cvで学習した各foldのモデルの平均により、テストデータの予測を行う
 
     あらかじめ、run_train_cvを実行しておく必要がある
     """
     logger.info(f'{self.run_name} - start predicting cv')
 
-    te_X = self.dataset.get_data([2018, 2019], 'tokyo')
+    te_data = self.dataset.get_data([2018, 2019], 'tokyo')
+    te_Y = te_data['target']
+    te_X = te_data.drop('target', axis=1)
 
     preds = []
+    scores = []
 
     # 各foldのモデルで予測を行う
     for i_fold in range(self.n_fold):
@@ -130,17 +141,26 @@ class Runner:
       model.load_model()
       pred = model.predict(te_X)
       preds.append(pred)
-      logger.info(f'{self.run_name} - end prediction fold:{i_fold}')
+      score = mean_absolute_error(pred, te_Y)
+      scores.append(score)
+      logger.info(f'{self.run_name} - end prediction fold:{i_fold} - score {score}')
 
+    logger.info(f'{self.run_name} - end prediction cv')
     # 予測の平均値を出力する
-    pred_avg = no.mean(preds, axis=0)
+    pred_avg = np.mean(preds, axis=0)
+
+    return pred_avg, te_Y, scores
+
+  def run_predict_cv(self) -> None:
+    pred_avg, _, scores = self.get_predict_cv()
 
     # 予測結果の保存
     Util.dump(pred_avg, f'../model/pred/{self.run_name}-test.pkl')
 
-    logger.info(f'{self.run_name} - end prediction cv')
+    # スコアの算出
+    logger.result_scores(self.run_name, scores)
 
-  def run_train_all() -> None:
+  def run_train_all(self) -> None:
     """ 学習データ全てで学習し、そのモデルを保存する """
     logger.info(f'{self.run_name} - start training all')
 
@@ -151,7 +171,7 @@ class Runner:
 
     logger.info(f'{self.run_name} - end training all')
 
-  def run_predict_all() -> None:
+  def run_predict_all(self) -> None:
     """ 学習データすべてで学習したモデルにより、テストデータの予測を行う
 
     あらかじめrun_train_allを実行しておく必要がある
@@ -174,6 +194,6 @@ class Runner:
   def build_model(self, i_fold: Union[int, str]) -> Model:
     """ cvでのfoldを指定し、モデルの作成を行う """
 
-    run_hold_name = f'{self.run_name}-{i_fold}'
-    return self.model_cls(run_hold_name, self.params)
+    run_fold_name = f'{self.run_name}-{i_fold}'
+    return self.model_cls(run_fold_name, self.params)
 

@@ -1,5 +1,7 @@
 import pandas as pd
 from util import Util
+import pathlib
+import glob
 
 # 指定した条件のPdを返す
 class Dataset:
@@ -30,6 +32,21 @@ class Dataset:
         feature = Util.load_feature(name)
         datasets_list.append(feature)
     self.dataset = pd.DataFrame().join(datasets_list, how='outer')
+
+  @classmethod
+  def get_all_feature_names(cls):
+    # すべての特徴の名前を取得する
+    data = []
+    basic_data = Util.load_feature('basic_data')
+    globbed_files = pathlib.Path('./../features/').glob('*.pkl')
+    for globbed_file in globbed_files:
+      file_name = globbed_file.name
+      if file_name == 'basic_data.pkl':
+        continue
+      data.append(Util.load_feature(file_name))
+    data = basic_data.join(data, how='outer')
+    return data.columns
+
   # 年度を条件にして絞り込む
   def __select_by_year(self, years, data=None):
     def __to_year(data):

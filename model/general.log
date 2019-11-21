@@ -1,0 +1,1021 @@
+[2019-11-21 18:40:28] - test - start training cv
+[2019-11-21 18:40:28] - test fold 0 - start training
+[2019-11-21 18:40:28] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:40:28] - test fold 1 - start training
+[2019-11-21 18:40:28] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:40:28] - test fold 2 - start training
+[2019-11-21 18:40:28] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:40:28] - test fold 3 - start training
+[2019-11-21 18:40:28] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:40:28] - test fold 4 - start training
+[2019-11-21 18:40:28] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:40:28] - test - start predicting cv
+[2019-11-21 18:40:29] - test - start prediction fold:0
+[2019-11-21 18:40:29] - test - end prediction fold:0
+[2019-11-21 18:40:29] - test - start prediction fold:1
+[2019-11-21 18:40:29] - test - end prediction fold:1
+[2019-11-21 18:40:29] - test - start prediction fold:2
+[2019-11-21 18:40:29] - test - end prediction fold:2
+[2019-11-21 18:40:29] - test - start prediction fold:3
+[2019-11-21 18:40:29] - test - end prediction fold:3
+[2019-11-21 18:40:29] - test - start prediction fold:4
+[2019-11-21 18:40:29] - test - end prediction fold:4
+[2019-11-21 18:40:29] - test - end prediction cv
+[2019-11-21 18:41:05] - test - start training cv
+[2019-11-21 18:41:05] - test fold 0 - start training
+[2019-11-21 18:41:05] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:41:05] - test fold 1 - start training
+[2019-11-21 18:41:06] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:41:06] - test fold 2 - start training
+[2019-11-21 18:41:06] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:41:06] - test fold 3 - start training
+[2019-11-21 18:41:06] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:41:06] - test fold 4 - start training
+[2019-11-21 18:41:06] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:41:06] - test - start predicting cv
+[2019-11-21 18:41:06] - test - start prediction fold:0
+[2019-11-21 18:41:06] - test - end prediction fold:0
+[2019-11-21 18:41:06] - test - start prediction fold:1
+[2019-11-21 18:41:06] - test - end prediction fold:1
+[2019-11-21 18:41:06] - test - start prediction fold:2
+[2019-11-21 18:41:06] - test - end prediction fold:2
+[2019-11-21 18:41:06] - test - start prediction fold:3
+[2019-11-21 18:41:06] - test - end prediction fold:3
+[2019-11-21 18:41:06] - test - start prediction fold:4
+[2019-11-21 18:41:06] - test - end prediction fold:4
+[2019-11-21 18:41:06] - test - end prediction cv
+[2019-11-21 18:43:07] - test - start training cv
+[2019-11-21 18:43:07] - test fold 0 - start training
+[2019-11-21 18:43:07] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:43:07] - test fold 1 - start training
+[2019-11-21 18:43:07] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:43:07] - test fold 2 - start training
+[2019-11-21 18:43:07] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:43:07] - test fold 3 - start training
+[2019-11-21 18:43:08] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:43:08] - test fold 4 - start training
+[2019-11-21 18:43:08] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:43:08] - test - start predicting cv
+[2019-11-21 18:43:08] - test - start prediction fold:0
+[2019-11-21 18:43:08] - test - end prediction fold:0
+[2019-11-21 18:43:08] - test - start prediction fold:1
+[2019-11-21 18:43:08] - test - end prediction fold:1
+[2019-11-21 18:43:08] - test - start prediction fold:2
+[2019-11-21 18:43:08] - test - end prediction fold:2
+[2019-11-21 18:43:08] - test - start prediction fold:3
+[2019-11-21 18:43:08] - test - end prediction fold:3
+[2019-11-21 18:43:08] - test - start prediction fold:4
+[2019-11-21 18:43:08] - test - end prediction fold:4
+[2019-11-21 18:43:29] - test - start training cv
+[2019-11-21 18:43:29] - test fold 0 - start training
+[2019-11-21 18:43:29] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:43:29] - test fold 1 - start training
+[2019-11-21 18:43:29] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:43:29] - test fold 2 - start training
+[2019-11-21 18:43:29] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:43:29] - test fold 3 - start training
+[2019-11-21 18:43:29] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:43:29] - test fold 4 - start training
+[2019-11-21 18:43:29] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:43:29] - test - start predicting cv
+[2019-11-21 18:43:29] - test - start prediction fold:0
+[2019-11-21 18:43:29] - test - end prediction fold:0
+[2019-11-21 18:43:29] - test - start prediction fold:1
+[2019-11-21 18:43:29] - test - end prediction fold:1
+[2019-11-21 18:43:29] - test - start prediction fold:2
+[2019-11-21 18:43:29] - test - end prediction fold:2
+[2019-11-21 18:43:29] - test - start prediction fold:3
+[2019-11-21 18:43:29] - test - end prediction fold:3
+[2019-11-21 18:43:29] - test - start prediction fold:4
+[2019-11-21 18:43:30] - test - end prediction fold:4
+[2019-11-21 18:44:15] - test - start training cv
+[2019-11-21 18:44:15] - test fold 0 - start training
+[2019-11-21 18:44:15] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:44:15] - test fold 1 - start training
+[2019-11-21 18:44:15] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:44:15] - test fold 2 - start training
+[2019-11-21 18:44:15] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:44:15] - test fold 3 - start training
+[2019-11-21 18:44:15] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:44:15] - test fold 4 - start training
+[2019-11-21 18:44:16] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:44:16] - test - start predicting cv
+[2019-11-21 18:44:16] - test - start prediction fold:0
+[2019-11-21 18:44:16] - test - end prediction fold:0
+[2019-11-21 18:44:16] - test - start prediction fold:1
+[2019-11-21 18:44:16] - test - end prediction fold:1
+[2019-11-21 18:44:16] - test - start prediction fold:2
+[2019-11-21 18:44:16] - test - end prediction fold:2
+[2019-11-21 18:44:16] - test - start prediction fold:3
+[2019-11-21 18:44:16] - test - end prediction fold:3
+[2019-11-21 18:44:16] - test - start prediction fold:4
+[2019-11-21 18:44:16] - test - end prediction fold:4
+[2019-11-21 18:44:16] - test - end prediction cv
+[2019-11-21 18:44:54] - test - start training cv
+[2019-11-21 18:44:54] - test fold 0 - start training
+[2019-11-21 18:44:54] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:44:54] - test fold 1 - start training
+[2019-11-21 18:44:54] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:44:54] - test fold 2 - start training
+[2019-11-21 18:44:54] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:44:54] - test fold 3 - start training
+[2019-11-21 18:44:54] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:44:54] - test fold 4 - start training
+[2019-11-21 18:44:54] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:44:54] - test - start predicting cv
+[2019-11-21 18:44:54] - test - start prediction fold:0
+[2019-11-21 18:44:54] - test - end prediction fold:0
+[2019-11-21 18:44:54] - test - start prediction fold:1
+[2019-11-21 18:44:54] - test - end prediction fold:1
+[2019-11-21 18:44:54] - test - start prediction fold:2
+[2019-11-21 18:44:54] - test - end prediction fold:2
+[2019-11-21 18:44:54] - test - start prediction fold:3
+[2019-11-21 18:44:54] - test - end prediction fold:3
+[2019-11-21 18:44:54] - test - start prediction fold:4
+[2019-11-21 18:44:54] - test - end prediction fold:4
+[2019-11-21 18:44:54] - test - end prediction cv
+[2019-11-21 18:45:52] - test - start training cv
+[2019-11-21 18:45:52] - test fold 0 - start training
+[2019-11-21 18:45:52] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:45:52] - test fold 1 - start training
+[2019-11-21 18:45:52] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:45:52] - test fold 2 - start training
+[2019-11-21 18:45:52] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:45:52] - test fold 3 - start training
+[2019-11-21 18:45:52] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:45:52] - test fold 4 - start training
+[2019-11-21 18:45:52] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:45:52] - test fold 5 - start training
+[2019-11-21 18:46:26] - test - start training cv
+[2019-11-21 18:46:26] - test fold 0 - start training
+[2019-11-21 18:46:26] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:46:26] - test fold 1 - start training
+[2019-11-21 18:46:27] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:46:27] - test fold 2 - start training
+[2019-11-21 18:46:27] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:46:27] - test fold 3 - start training
+[2019-11-21 18:46:27] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:46:27] - test fold 4 - start training
+[2019-11-21 18:46:27] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:46:27] - test - start predicting cv
+[2019-11-21 18:46:27] - test - start prediction fold:0
+[2019-11-21 18:46:27] - test - end prediction fold:0
+[2019-11-21 18:46:27] - test - start prediction fold:1
+[2019-11-21 18:46:27] - test - end prediction fold:1
+[2019-11-21 18:46:27] - test - start prediction fold:2
+[2019-11-21 18:46:27] - test - end prediction fold:2
+[2019-11-21 18:46:27] - test - start prediction fold:3
+[2019-11-21 18:46:27] - test - end prediction fold:3
+[2019-11-21 18:46:27] - test - start prediction fold:4
+[2019-11-21 18:46:27] - test - end prediction fold:4
+[2019-11-21 18:46:27] - test - end prediction cv
+[2019-11-21 18:49:14] - test - start training cv
+[2019-11-21 18:49:14] - test fold 0 - start training
+[2019-11-21 18:52:04] - test - start training cv
+[2019-11-21 18:52:04] - test fold 0 - start training
+[2019-11-21 18:52:04] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:52:04] - test fold 1 - start training
+[2019-11-21 18:52:04] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:52:04] - test fold 2 - start training
+[2019-11-21 18:52:04] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:52:04] - test fold 3 - start training
+[2019-11-21 18:52:04] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:52:04] - test fold 4 - start training
+[2019-11-21 18:52:04] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:52:04] - test - start predicting cv
+[2019-11-21 18:52:05] - test - start prediction fold:0
+[2019-11-21 18:52:05] - test - end prediction fold:0
+[2019-11-21 18:52:05] - test - start prediction fold:1
+[2019-11-21 18:52:05] - test - end prediction fold:1
+[2019-11-21 18:52:05] - test - start prediction fold:2
+[2019-11-21 18:52:05] - test - end prediction fold:2
+[2019-11-21 18:52:05] - test - start prediction fold:3
+[2019-11-21 18:52:05] - test - end prediction fold:3
+[2019-11-21 18:52:05] - test - start prediction fold:4
+[2019-11-21 18:52:05] - test - end prediction fold:4
+[2019-11-21 18:52:05] - test - end prediction cv
+[2019-11-21 18:52:25] - test - start training cv
+[2019-11-21 18:52:25] - test fold 0 - start training
+[2019-11-21 18:52:25] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:52:25] - test fold 1 - start training
+[2019-11-21 18:52:25] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:52:25] - test fold 2 - start training
+[2019-11-21 18:52:25] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:52:25] - test fold 3 - start training
+[2019-11-21 18:52:25] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:52:25] - test fold 4 - start training
+[2019-11-21 18:52:26] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:52:26] - test - start predicting cv
+[2019-11-21 18:52:26] - test - start prediction fold:0
+[2019-11-21 18:52:26] - test - end prediction fold:0
+[2019-11-21 18:52:26] - test - start prediction fold:1
+[2019-11-21 18:52:26] - test - end prediction fold:1
+[2019-11-21 18:52:26] - test - start prediction fold:2
+[2019-11-21 18:52:26] - test - end prediction fold:2
+[2019-11-21 18:52:26] - test - start prediction fold:3
+[2019-11-21 18:52:26] - test - end prediction fold:3
+[2019-11-21 18:52:26] - test - start prediction fold:4
+[2019-11-21 18:52:26] - test - end prediction fold:4
+[2019-11-21 18:52:26] - test - end prediction cv
+[2019-11-21 18:52:54] - test - start training cv
+[2019-11-21 18:52:54] - test fold 0 - start training
+[2019-11-21 18:52:54] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:52:54] - test fold 1 - start training
+[2019-11-21 18:52:54] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:52:54] - test fold 2 - start training
+[2019-11-21 18:52:54] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:52:54] - test fold 3 - start training
+[2019-11-21 18:52:54] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:52:54] - test fold 4 - start training
+[2019-11-21 18:52:55] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:52:55] - test - start predicting cv
+[2019-11-21 18:52:55] - test - start prediction fold:0
+[2019-11-21 18:52:55] - test - end prediction fold:0
+[2019-11-21 18:52:55] - test - start prediction fold:1
+[2019-11-21 18:52:55] - test - end prediction fold:1
+[2019-11-21 18:52:55] - test - start prediction fold:2
+[2019-11-21 18:52:55] - test - end prediction fold:2
+[2019-11-21 18:52:55] - test - start prediction fold:3
+[2019-11-21 18:52:55] - test - end prediction fold:3
+[2019-11-21 18:52:55] - test - start prediction fold:4
+[2019-11-21 18:52:55] - test - end prediction fold:4
+[2019-11-21 18:52:55] - test - end prediction cv
+[2019-11-21 18:54:28] - test - start training cv
+[2019-11-21 18:54:28] - test fold 0 - start training
+[2019-11-21 18:54:28] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:54:28] - test fold 1 - start training
+[2019-11-21 18:54:28] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:54:28] - test fold 2 - start training
+[2019-11-21 18:54:29] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:54:29] - test fold 3 - start training
+[2019-11-21 18:54:29] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:54:29] - test fold 4 - start training
+[2019-11-21 18:54:29] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:54:29] - test - start predicting cv
+[2019-11-21 18:54:29] - test - start prediction fold:0
+[2019-11-21 18:54:29] - test - end prediction fold:0 - score 36.90657467155284
+[2019-11-21 18:54:29] - test - start prediction fold:1
+[2019-11-21 18:54:29] - test - end prediction fold:1 - score 25.619899542469447
+[2019-11-21 18:54:29] - test - start prediction fold:2
+[2019-11-21 18:54:29] - test - end prediction fold:2 - score 26.540026193191864
+[2019-11-21 18:54:29] - test - start prediction fold:3
+[2019-11-21 18:54:29] - test - end prediction fold:3 - score 28.582372107683305
+[2019-11-21 18:54:29] - test - start prediction fold:4
+[2019-11-21 18:54:29] - test - end prediction fold:4 - score 26.557687145682188
+[2019-11-21 18:54:29] - test - end prediction cv
+[2019-11-21 18:55:35] - test - start training cv
+[2019-11-21 18:55:35] - test fold 0 - start training
+[2019-11-21 18:55:35] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 18:55:35] - test fold 1 - start training
+[2019-11-21 18:55:35] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 18:55:35] - test fold 2 - start training
+[2019-11-21 18:55:35] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 18:55:35] - test fold 3 - start training
+[2019-11-21 18:55:35] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 18:55:35] - test fold 4 - start training
+[2019-11-21 18:55:35] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 18:55:35] - test - end training cv
+[2019-11-21 18:55:35] - test - start predicting cv
+[2019-11-21 18:55:35] - test - start prediction fold:0
+[2019-11-21 18:55:35] - test - end prediction fold:0 - score 36.90657467155284
+[2019-11-21 18:55:35] - test - start prediction fold:1
+[2019-11-21 18:55:35] - test - end prediction fold:1 - score 25.619899542469447
+[2019-11-21 18:55:35] - test - start prediction fold:2
+[2019-11-21 18:55:35] - test - end prediction fold:2 - score 26.540026193191864
+[2019-11-21 18:55:35] - test - start prediction fold:3
+[2019-11-21 18:55:35] - test - end prediction fold:3 - score 28.582372107683305
+[2019-11-21 18:55:35] - test - start prediction fold:4
+[2019-11-21 18:55:35] - test - end prediction fold:4 - score 26.557687145682188
+[2019-11-21 18:55:35] - test - end prediction cv
+[2019-11-21 19:54:39] - test - start training cv
+[2019-11-21 19:55:44] - test - start training cv
+[2019-11-21 19:56:01] - test - start training cv
+[2019-11-21 19:56:28] - test - start training cv
+[2019-11-21 19:56:55] - test - start training cv
+[2019-11-21 19:56:55] - test fold 0 - start training
+[2019-11-21 19:58:01] - test - start training cv
+[2019-11-21 19:58:01] - test fold 0 - start training
+[2019-11-21 19:58:26] - test - start training cv
+[2019-11-21 19:58:26] - test fold 0 - start training
+[2019-11-21 19:59:03] - test - start training cv
+[2019-11-21 19:59:03] - test fold 0 - start training
+[2019-11-21 19:59:14] - test - start training cv
+[2019-11-21 19:59:14] - test fold 0 - start training
+[2019-11-21 19:59:49] - test - start training cv
+[2019-11-21 19:59:49] - test fold 0 - start training
+[2019-11-21 20:01:37] - test - start training cv
+[2019-11-21 20:01:37] - test fold 0 - start training
+[2019-11-21 20:01:37] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 20:01:37] - test fold 1 - start training
+[2019-11-21 20:01:37] - test fold 1 - end training - score 17.368201310998177
+[2019-11-21 20:01:37] - test fold 2 - start training
+[2019-11-21 20:01:37] - test fold 2 - end training - score 7.9871109960163444
+[2019-11-21 20:01:37] - test fold 3 - start training
+[2019-11-21 20:01:51] - test - start training cv
+[2019-11-21 20:01:51] - test fold 0 - start training
+[2019-11-21 20:01:51] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 20:01:51] - test fold 1 - start training
+[2019-11-21 20:01:51] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 20:01:51] - test fold 2 - start training
+[2019-11-21 20:01:51] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 20:01:51] - test fold 3 - start training
+[2019-11-21 20:01:52] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 20:01:52] - test fold 4 - start training
+[2019-11-21 20:01:52] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 20:01:52] - test - end training cv
+[2019-11-21 20:01:52] - test - start predicting cv
+[2019-11-21 20:01:52] - test - start prediction fold:0
+[2019-11-21 20:01:52] - test - end prediction fold:0 - score 36.90657467155284
+[2019-11-21 20:01:52] - test - start prediction fold:1
+[2019-11-21 20:01:52] - test - end prediction fold:1 - score 25.619899542469447
+[2019-11-21 20:01:52] - test - start prediction fold:2
+[2019-11-21 20:01:52] - test - end prediction fold:2 - score 26.540026193191864
+[2019-11-21 20:01:52] - test - start prediction fold:3
+[2019-11-21 20:01:52] - test - end prediction fold:3 - score 28.582372107683305
+[2019-11-21 20:01:52] - test - start prediction fold:4
+[2019-11-21 20:01:52] - test - end prediction fold:4 - score 26.557687145682188
+[2019-11-21 20:01:52] - test - end prediction cv
+[2019-11-21 20:03:33] - test - start training cv
+[2019-11-21 20:03:33] - test fold 0 - start training
+[2019-11-21 20:03:33] - test fold 0 - end training - score 17.25586245618043
+[2019-11-21 20:03:33] - test fold 1 - start training
+[2019-11-21 20:03:33] - test fold 1 - end training - score 14.016031893379836
+[2019-11-21 20:03:33] - test fold 2 - start training
+[2019-11-21 20:03:33] - test fold 2 - end training - score 15.86487202352776
+[2019-11-21 20:03:33] - test fold 3 - start training
+[2019-11-21 20:03:33] - test fold 3 - end training - score 12.576313211653357
+[2019-11-21 20:03:33] - test fold 4 - start training
+[2019-11-21 20:03:34] - test fold 4 - end training - score 8.515909690746593
+[2019-11-21 20:03:34] - test - end training cv
+[2019-11-21 20:03:34] - test - start predicting cv
+[2019-11-21 20:03:34] - test - start prediction fold:0
+[2019-11-21 20:03:34] - test - end prediction fold:0 - score 36.90657467155284
+[2019-11-21 20:03:34] - test - start prediction fold:1
+[2019-11-21 20:03:34] - test - end prediction fold:1 - score 25.619899542469447
+[2019-11-21 20:03:34] - test - start prediction fold:2
+[2019-11-21 20:03:34] - test - end prediction fold:2 - score 26.540026193191864
+[2019-11-21 20:03:34] - test - start prediction fold:3
+[2019-11-21 20:03:34] - test - end prediction fold:3 - score 28.582372107683305
+[2019-11-21 20:03:34] - test - start prediction fold:4
+[2019-11-21 20:03:34] - test - end prediction fold:4 - score 26.557687145682188
+[2019-11-21 20:03:34] - test - end prediction cv
+[2019-11-21 20:04:00] - test - start training cv
+[2019-11-21 20:04:00] - test fold 0 - start training
+[2019-11-21 20:04:00] - test fold 0 - end training - score 14.878810020139705
+[2019-11-21 20:04:00] - test fold 1 - start training
+[2019-11-21 20:04:00] - test fold 1 - end training - score 17.368201310998177
+[2019-11-21 20:04:00] - test fold 2 - start training
+[2019-11-21 20:04:00] - test fold 2 - end training - score 12.09509069715188
+[2019-11-21 20:04:00] - test fold 3 - start training
+[2019-11-21 20:04:00] - test fold 3 - end training - score 7.967193519690371
+[2019-11-21 20:04:00] - test - end training cv
+[2019-11-21 20:04:00] - test - start predicting cv
+[2019-11-21 20:04:00] - test - start prediction fold:0
+[2019-11-21 20:04:00] - test - end prediction fold:0 - score 26.996634210036795
+[2019-11-21 20:04:00] - test - start prediction fold:1
+[2019-11-21 20:04:00] - test - end prediction fold:1 - score 27.105544996316823
+[2019-11-21 20:04:00] - test - start prediction fold:2
+[2019-11-21 20:04:00] - test - end prediction fold:2 - score 27.291891226473627
+[2019-11-21 20:04:00] - test - start prediction fold:3
+[2019-11-21 20:04:00] - test - end prediction fold:3 - score 26.924955763499057
+[2019-11-21 20:04:00] - test - end prediction cv
+[2019-11-21 20:35:01] - test - start training cv
+[2019-11-21 20:35:01] - test fold 0 - start training
+[2019-11-21 20:35:01] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:35:01] - test fold 1 - start training
+[2019-11-21 20:35:01] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:35:01] - test fold 2 - start training
+[2019-11-21 20:35:01] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:35:01] - test fold 3 - start training
+[2019-11-21 20:35:01] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:35:02] - test - end training cv
+[2019-11-21 20:35:02] - test - start predicting cv
+[2019-11-21 20:35:02] - test - start prediction fold:0
+[2019-11-21 20:35:02] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:35:02] - test - start prediction fold:1
+[2019-11-21 20:35:02] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:35:02] - test - start prediction fold:2
+[2019-11-21 20:35:02] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:35:02] - test - start prediction fold:3
+[2019-11-21 20:35:02] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:35:02] - test - end prediction cv
+[2019-11-21 20:43:03] - test - start training cv
+[2019-11-21 20:43:03] - test fold 0 - start training
+[2019-11-21 20:43:03] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:43:03] - test fold 1 - start training
+[2019-11-21 20:43:04] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:43:04] - test fold 2 - start training
+[2019-11-21 20:43:04] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:43:04] - test fold 3 - start training
+[2019-11-21 20:43:04] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:43:04] - test - end training cv
+[2019-11-21 20:43:04] - test - start predicting cv
+[2019-11-21 20:43:04] - test - start prediction fold:0
+[2019-11-21 20:43:04] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:43:04] - test - start prediction fold:1
+[2019-11-21 20:43:04] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:43:04] - test - start prediction fold:2
+[2019-11-21 20:43:04] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:43:04] - test - start prediction fold:3
+[2019-11-21 20:43:04] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:43:04] - test - end prediction cv
+[2019-11-21 20:45:31] - test - start training cv
+[2019-11-21 20:45:31] - test fold 0 - start training
+[2019-11-21 20:45:31] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:45:31] - test fold 1 - start training
+[2019-11-21 20:45:31] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:45:31] - test fold 2 - start training
+[2019-11-21 20:45:31] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:45:31] - test fold 3 - start training
+[2019-11-21 20:45:31] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:45:31] - test - end training cv
+[2019-11-21 20:45:31] - test - start predicting cv
+[2019-11-21 20:45:31] - test - start prediction fold:0
+[2019-11-21 20:45:31] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:45:31] - test - start prediction fold:1
+[2019-11-21 20:45:31] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:45:31] - test - start prediction fold:2
+[2019-11-21 20:45:31] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:45:31] - test - start prediction fold:3
+[2019-11-21 20:45:31] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:45:31] - test - end prediction cv
+[2019-11-21 20:45:31] - test - start predicting cv
+[2019-11-21 20:45:31] - test - start prediction fold:0
+[2019-11-21 20:45:31] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:45:31] - test - start prediction fold:1
+[2019-11-21 20:45:31] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:45:31] - test - start prediction fold:2
+[2019-11-21 20:45:31] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:45:31] - test - start prediction fold:3
+[2019-11-21 20:45:31] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:45:31] - test - end prediction cv
+[2019-11-21 20:45:58] - test - start training cv
+[2019-11-21 20:45:58] - test fold 0 - start training
+[2019-11-21 20:45:59] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:45:59] - test fold 1 - start training
+[2019-11-21 20:45:59] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:45:59] - test fold 2 - start training
+[2019-11-21 20:45:59] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:45:59] - test fold 3 - start training
+[2019-11-21 20:45:59] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:45:59] - test - end training cv
+[2019-11-21 20:45:59] - test - start predicting cv
+[2019-11-21 20:45:59] - test - start prediction fold:0
+[2019-11-21 20:45:59] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:45:59] - test - start prediction fold:1
+[2019-11-21 20:45:59] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:45:59] - test - start prediction fold:2
+[2019-11-21 20:45:59] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:45:59] - test - start prediction fold:3
+[2019-11-21 20:45:59] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:45:59] - test - end prediction cv
+[2019-11-21 20:45:59] - test - start predicting cv
+[2019-11-21 20:45:59] - test - start prediction fold:0
+[2019-11-21 20:45:59] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:45:59] - test - start prediction fold:1
+[2019-11-21 20:45:59] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:45:59] - test - start prediction fold:2
+[2019-11-21 20:45:59] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:45:59] - test - start prediction fold:3
+[2019-11-21 20:45:59] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:45:59] - test - end prediction cv
+[2019-11-21 20:46:14] - test - start training cv
+[2019-11-21 20:46:14] - test fold 0 - start training
+[2019-11-21 20:46:14] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:46:14] - test fold 1 - start training
+[2019-11-21 20:46:14] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:46:14] - test fold 2 - start training
+[2019-11-21 20:46:14] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:46:14] - test fold 3 - start training
+[2019-11-21 20:46:14] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:46:14] - test - end training cv
+[2019-11-21 20:46:14] - test - start predicting cv
+[2019-11-21 20:46:14] - test - start prediction fold:0
+[2019-11-21 20:46:14] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:46:14] - test - start prediction fold:1
+[2019-11-21 20:46:14] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:46:14] - test - start prediction fold:2
+[2019-11-21 20:46:14] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:46:14] - test - start prediction fold:3
+[2019-11-21 20:46:14] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:46:14] - test - end prediction cv
+[2019-11-21 20:46:14] - test - start predicting cv
+[2019-11-21 20:46:14] - test - start prediction fold:0
+[2019-11-21 20:46:14] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:46:14] - test - start prediction fold:1
+[2019-11-21 20:46:15] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:46:15] - test - start prediction fold:2
+[2019-11-21 20:46:15] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:46:15] - test - start prediction fold:3
+[2019-11-21 20:46:15] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:46:15] - test - end prediction cv
+[2019-11-21 20:46:33] - test - start training cv
+[2019-11-21 20:46:33] - test fold 0 - start training
+[2019-11-21 20:46:33] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:46:33] - test fold 1 - start training
+[2019-11-21 20:46:34] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:46:34] - test fold 2 - start training
+[2019-11-21 20:46:34] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:46:34] - test fold 3 - start training
+[2019-11-21 20:46:34] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:46:34] - test - end training cv
+[2019-11-21 20:46:34] - test - start predicting cv
+[2019-11-21 20:46:34] - test - start prediction fold:0
+[2019-11-21 20:46:34] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:46:34] - test - start prediction fold:1
+[2019-11-21 20:46:34] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:46:34] - test - start prediction fold:2
+[2019-11-21 20:46:34] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:46:34] - test - start prediction fold:3
+[2019-11-21 20:46:34] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:46:34] - test - end prediction cv
+[2019-11-21 20:46:34] - test - start predicting cv
+[2019-11-21 20:46:34] - test - start prediction fold:0
+[2019-11-21 20:46:34] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:46:34] - test - start prediction fold:1
+[2019-11-21 20:46:34] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:46:34] - test - start prediction fold:2
+[2019-11-21 20:46:34] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:46:34] - test - start prediction fold:3
+[2019-11-21 20:46:34] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:46:34] - test - end prediction cv
+[2019-11-21 20:47:05] - test - start training cv
+[2019-11-21 20:47:05] - test fold 0 - start training
+[2019-11-21 20:47:05] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:47:05] - test fold 1 - start training
+[2019-11-21 20:47:05] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:47:05] - test fold 2 - start training
+[2019-11-21 20:47:05] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:47:05] - test fold 3 - start training
+[2019-11-21 20:47:05] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:47:05] - test - end training cv
+[2019-11-21 20:47:05] - test - start predicting cv
+[2019-11-21 20:47:06] - test - start prediction fold:0
+[2019-11-21 20:47:06] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:06] - test - start prediction fold:1
+[2019-11-21 20:47:06] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:06] - test - start prediction fold:2
+[2019-11-21 20:47:06] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:06] - test - start prediction fold:3
+[2019-11-21 20:47:06] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:06] - test - end prediction cv
+[2019-11-21 20:47:06] - test - start predicting cv
+[2019-11-21 20:47:06] - test - start prediction fold:0
+[2019-11-21 20:47:06] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:06] - test - start prediction fold:1
+[2019-11-21 20:47:06] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:06] - test - start prediction fold:2
+[2019-11-21 20:47:06] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:06] - test - start prediction fold:3
+[2019-11-21 20:47:06] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:06] - test - end prediction cv
+[2019-11-21 20:47:27] - test - start training cv
+[2019-11-21 20:47:27] - test fold 0 - start training
+[2019-11-21 20:47:27] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:47:27] - test fold 1 - start training
+[2019-11-21 20:47:27] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:47:27] - test fold 2 - start training
+[2019-11-21 20:47:27] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:47:27] - test fold 3 - start training
+[2019-11-21 20:47:27] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:47:27] - test - end training cv
+[2019-11-21 20:47:27] - test - start predicting cv
+[2019-11-21 20:47:27] - test - start prediction fold:0
+[2019-11-21 20:47:27] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:27] - test - start prediction fold:1
+[2019-11-21 20:47:27] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:27] - test - start prediction fold:2
+[2019-11-21 20:47:27] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:27] - test - start prediction fold:3
+[2019-11-21 20:47:27] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:27] - test - end prediction cv
+[2019-11-21 20:47:27] - test - start predicting cv
+[2019-11-21 20:47:27] - test - start prediction fold:0
+[2019-11-21 20:47:27] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:27] - test - start prediction fold:1
+[2019-11-21 20:47:27] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:27] - test - start prediction fold:2
+[2019-11-21 20:47:27] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:27] - test - start prediction fold:3
+[2019-11-21 20:47:27] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:27] - test - end prediction cv
+[2019-11-21 20:47:40] - test - start training cv
+[2019-11-21 20:47:40] - test fold 0 - start training
+[2019-11-21 20:47:40] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:47:40] - test fold 1 - start training
+[2019-11-21 20:47:40] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:47:40] - test fold 2 - start training
+[2019-11-21 20:47:41] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:47:41] - test fold 3 - start training
+[2019-11-21 20:47:41] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:47:41] - test - end training cv
+[2019-11-21 20:47:41] - test - start predicting cv
+[2019-11-21 20:47:41] - test - start prediction fold:0
+[2019-11-21 20:47:41] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:41] - test - start prediction fold:1
+[2019-11-21 20:47:41] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:41] - test - start prediction fold:2
+[2019-11-21 20:47:41] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:41] - test - start prediction fold:3
+[2019-11-21 20:47:41] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:41] - test - end prediction cv
+[2019-11-21 20:47:41] - test - start predicting cv
+[2019-11-21 20:47:41] - test - start prediction fold:0
+[2019-11-21 20:47:41] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:41] - test - start prediction fold:1
+[2019-11-21 20:47:41] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:41] - test - start prediction fold:2
+[2019-11-21 20:47:41] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:41] - test - start prediction fold:3
+[2019-11-21 20:47:41] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:41] - test - end prediction cv
+[2019-11-21 20:47:55] - test - start training cv
+[2019-11-21 20:47:55] - test fold 0 - start training
+[2019-11-21 20:47:55] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:47:55] - test fold 1 - start training
+[2019-11-21 20:47:55] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:47:55] - test fold 2 - start training
+[2019-11-21 20:47:55] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:47:55] - test fold 3 - start training
+[2019-11-21 20:47:55] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:47:55] - test - end training cv
+[2019-11-21 20:47:55] - test - start predicting cv
+[2019-11-21 20:47:55] - test - start prediction fold:0
+[2019-11-21 20:47:55] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:55] - test - start prediction fold:1
+[2019-11-21 20:47:55] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:55] - test - start prediction fold:2
+[2019-11-21 20:47:55] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:55] - test - start prediction fold:3
+[2019-11-21 20:47:55] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:55] - test - end prediction cv
+[2019-11-21 20:47:55] - test - start predicting cv
+[2019-11-21 20:47:55] - test - start prediction fold:0
+[2019-11-21 20:47:55] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:47:55] - test - start prediction fold:1
+[2019-11-21 20:47:55] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:47:55] - test - start prediction fold:2
+[2019-11-21 20:47:55] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:47:55] - test - start prediction fold:3
+[2019-11-21 20:47:55] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:47:55] - test - end prediction cv
+[2019-11-21 20:48:12] - test - start training cv
+[2019-11-21 20:48:12] - test fold 0 - start training
+[2019-11-21 20:48:12] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:48:12] - test fold 1 - start training
+[2019-11-21 20:48:12] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:48:12] - test fold 2 - start training
+[2019-11-21 20:48:12] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:48:12] - test fold 3 - start training
+[2019-11-21 20:48:12] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:48:12] - test - end training cv
+[2019-11-21 20:48:12] - test - start predicting cv
+[2019-11-21 20:48:12] - test - start prediction fold:0
+[2019-11-21 20:48:12] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:48:12] - test - start prediction fold:1
+[2019-11-21 20:48:12] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:48:12] - test - start prediction fold:2
+[2019-11-21 20:48:12] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:48:12] - test - start prediction fold:3
+[2019-11-21 20:48:12] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:48:12] - test - end prediction cv
+[2019-11-21 20:48:12] - test - start predicting cv
+[2019-11-21 20:48:12] - test - start prediction fold:0
+[2019-11-21 20:48:12] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:48:12] - test - start prediction fold:1
+[2019-11-21 20:48:12] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:48:12] - test - start prediction fold:2
+[2019-11-21 20:48:12] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:48:12] - test - start prediction fold:3
+[2019-11-21 20:48:12] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:48:12] - test - end prediction cv
+[2019-11-21 20:49:21] - test - start training cv
+[2019-11-21 20:49:21] - test fold 0 - start training
+[2019-11-21 20:49:21] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:49:21] - test fold 1 - start training
+[2019-11-21 20:49:21] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:49:21] - test fold 2 - start training
+[2019-11-21 20:49:21] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:49:21] - test fold 3 - start training
+[2019-11-21 20:49:21] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:49:21] - test - end training cv
+[2019-11-21 20:49:21] - test - start predicting cv
+[2019-11-21 20:49:21] - test - start prediction fold:0
+[2019-11-21 20:49:21] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:21] - test - start prediction fold:1
+[2019-11-21 20:49:21] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:21] - test - start prediction fold:2
+[2019-11-21 20:49:21] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:21] - test - start prediction fold:3
+[2019-11-21 20:49:21] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:21] - test - end prediction cv
+[2019-11-21 20:49:21] - test - start predicting cv
+[2019-11-21 20:49:21] - test - start prediction fold:0
+[2019-11-21 20:49:21] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:21] - test - start prediction fold:1
+[2019-11-21 20:49:21] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:21] - test - start prediction fold:2
+[2019-11-21 20:49:21] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:21] - test - start prediction fold:3
+[2019-11-21 20:49:21] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:21] - test - end prediction cv
+[2019-11-21 20:49:36] - test - start training cv
+[2019-11-21 20:49:36] - test fold 0 - start training
+[2019-11-21 20:49:37] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:49:37] - test fold 1 - start training
+[2019-11-21 20:49:37] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:49:37] - test fold 2 - start training
+[2019-11-21 20:49:37] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:49:37] - test fold 3 - start training
+[2019-11-21 20:49:37] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:49:37] - test - end training cv
+[2019-11-21 20:49:37] - test - start predicting cv
+[2019-11-21 20:49:37] - test - start prediction fold:0
+[2019-11-21 20:49:37] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:37] - test - start prediction fold:1
+[2019-11-21 20:49:37] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:37] - test - start prediction fold:2
+[2019-11-21 20:49:37] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:37] - test - start prediction fold:3
+[2019-11-21 20:49:37] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:37] - test - end prediction cv
+[2019-11-21 20:49:37] - test - start predicting cv
+[2019-11-21 20:49:37] - test - start prediction fold:0
+[2019-11-21 20:49:37] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:37] - test - start prediction fold:1
+[2019-11-21 20:49:37] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:37] - test - start prediction fold:2
+[2019-11-21 20:49:37] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:37] - test - start prediction fold:3
+[2019-11-21 20:49:37] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:37] - test - end prediction cv
+[2019-11-21 20:49:56] - test - start training cv
+[2019-11-21 20:49:56] - test fold 0 - start training
+[2019-11-21 20:49:56] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 20:49:56] - test fold 1 - start training
+[2019-11-21 20:49:56] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 20:49:56] - test fold 2 - start training
+[2019-11-21 20:49:56] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 20:49:56] - test fold 3 - start training
+[2019-11-21 20:49:57] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 20:49:57] - test - end training cv
+[2019-11-21 20:49:57] - test - start predicting cv
+[2019-11-21 20:49:57] - test - start prediction fold:0
+[2019-11-21 20:49:57] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:57] - test - start prediction fold:1
+[2019-11-21 20:49:57] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:57] - test - start prediction fold:2
+[2019-11-21 20:49:57] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:57] - test - start prediction fold:3
+[2019-11-21 20:49:57] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:57] - test - end prediction cv
+[2019-11-21 20:49:57] - test - start predicting cv
+[2019-11-21 20:49:57] - test - start prediction fold:0
+[2019-11-21 20:49:57] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 20:49:57] - test - start prediction fold:1
+[2019-11-21 20:49:57] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 20:49:57] - test - start prediction fold:2
+[2019-11-21 20:49:57] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 20:49:57] - test - start prediction fold:3
+[2019-11-21 20:49:57] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 20:49:57] - test - end prediction cv
+[2019-11-21 21:01:51] - test - start training cv
+[2019-11-21 21:01:51] - test fold 0 - start training
+[2019-11-21 21:01:51] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:01:51] - test fold 1 - start training
+[2019-11-21 21:01:51] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 21:01:51] - test fold 2 - start training
+[2019-11-21 21:01:51] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:01:51] - test fold 3 - start training
+[2019-11-21 21:01:52] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 21:01:52] - test - end training cv
+[2019-11-21 21:01:52] - test - start predicting cv
+[2019-11-21 21:01:52] - test - start prediction fold:0
+[2019-11-21 21:01:52] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:01:52] - test - start prediction fold:1
+[2019-11-21 21:01:52] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:01:52] - test - start prediction fold:2
+[2019-11-21 21:01:52] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:01:52] - test - start prediction fold:3
+[2019-11-21 21:01:52] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:01:52] - test - end prediction cv
+[2019-11-21 21:01:52] - test - start predicting cv
+[2019-11-21 21:01:52] - test - start prediction fold:0
+[2019-11-21 21:01:52] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:01:52] - test - start prediction fold:1
+[2019-11-21 21:01:52] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:01:52] - test - start prediction fold:2
+[2019-11-21 21:01:52] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:01:52] - test - start prediction fold:3
+[2019-11-21 21:01:52] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:01:52] - test - end prediction cv
+[2019-11-21 21:14:42] - test - start training cv
+[2019-11-21 21:14:42] - test fold 0 - start training
+[2019-11-21 21:14:42] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:14:42] - test fold 1 - start training
+[2019-11-21 21:14:42] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 21:14:42] - test fold 2 - start training
+[2019-11-21 21:14:42] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:14:42] - test fold 3 - start training
+[2019-11-21 21:14:42] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 21:14:42] - test - end training cv
+[2019-11-21 21:14:42] - test - start predicting cv
+[2019-11-21 21:14:42] - test - start prediction fold:0
+[2019-11-21 21:14:42] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:14:42] - test - start prediction fold:1
+[2019-11-21 21:14:42] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:14:42] - test - start prediction fold:2
+[2019-11-21 21:14:42] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:14:42] - test - start prediction fold:3
+[2019-11-21 21:14:42] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:14:42] - test - end prediction cv
+[2019-11-21 21:14:42] - test - start predicting cv
+[2019-11-21 21:14:42] - test - start prediction fold:0
+[2019-11-21 21:14:42] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:14:42] - test - start prediction fold:1
+[2019-11-21 21:14:42] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:14:42] - test - start prediction fold:2
+[2019-11-21 21:14:42] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:14:42] - test - start prediction fold:3
+[2019-11-21 21:14:42] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:14:42] - test - end prediction cv
+[2019-11-21 21:30:27] - test - start training cv
+[2019-11-21 21:30:27] - test fold 0 - start training
+[2019-11-21 21:30:27] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:30:27] - test fold 1 - start training
+[2019-11-21 21:30:28] - test fold 1 - end training - score 16.133807042721596
+[2019-11-21 21:30:28] - test fold 2 - start training
+[2019-11-21 21:30:28] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:30:28] - test fold 3 - start training
+[2019-11-21 21:30:28] - test fold 3 - end training - score 7.422536575689065
+[2019-11-21 21:30:28] - test - end training cv
+[2019-11-21 21:30:28] - test - start predicting cv
+[2019-11-21 21:30:28] - test - start prediction fold:0
+[2019-11-21 21:30:28] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:30:28] - test - start prediction fold:1
+[2019-11-21 21:30:28] - test - end prediction fold:1 - score 23.81013395375724
+[2019-11-21 21:30:28] - test - start prediction fold:2
+[2019-11-21 21:30:28] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:30:28] - test - start prediction fold:3
+[2019-11-21 21:30:28] - test - end prediction fold:3 - score 23.822961404437656
+[2019-11-21 21:30:28] - test - end prediction cv
+[2019-11-21 21:30:28] - test - start predicting cv
+[2019-11-21 21:30:28] - test - start prediction fold:0
+[2019-11-21 21:30:28] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:30:28] - test - start prediction fold:1
+[2019-11-21 21:30:28] - test - end prediction fold:1 - score 23.81013395375724
+[2019-11-21 21:30:28] - test - start prediction fold:2
+[2019-11-21 21:30:28] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:30:28] - test - start prediction fold:3
+[2019-11-21 21:30:28] - test - end prediction fold:3 - score 23.822961404437656
+[2019-11-21 21:30:28] - test - end prediction cv
+[2019-11-21 21:30:52] - test - start training cv
+[2019-11-21 21:30:52] - test fold 0 - start training
+[2019-11-21 21:30:52] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:30:52] - test fold 1 - start training
+[2019-11-21 21:30:52] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 21:30:52] - test fold 2 - start training
+[2019-11-21 21:30:53] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:30:53] - test fold 3 - start training
+[2019-11-21 21:30:53] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 21:30:53] - test - end training cv
+[2019-11-21 21:30:53] - test - start predicting cv
+[2019-11-21 21:30:53] - test - start prediction fold:0
+[2019-11-21 21:30:53] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:30:53] - test - start prediction fold:1
+[2019-11-21 21:30:53] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:30:53] - test - start prediction fold:2
+[2019-11-21 21:30:53] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:30:53] - test - start prediction fold:3
+[2019-11-21 21:30:53] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:30:53] - test - end prediction cv
+[2019-11-21 21:30:53] - test - start predicting cv
+[2019-11-21 21:30:53] - test - start prediction fold:0
+[2019-11-21 21:30:53] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:30:53] - test - start prediction fold:1
+[2019-11-21 21:30:53] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:30:53] - test - start prediction fold:2
+[2019-11-21 21:30:53] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:30:53] - test - start prediction fold:3
+[2019-11-21 21:30:53] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:30:53] - test - end prediction cv
+[2019-11-21 21:31:41] - test - start training cv
+[2019-11-21 21:31:41] - test fold 0 - start training
+[2019-11-21 21:31:41] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:31:41] - test fold 1 - start training
+[2019-11-21 21:31:42] - test fold 1 - end training - score 16.646309375444666
+[2019-11-21 21:31:42] - test fold 2 - start training
+[2019-11-21 21:31:42] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:31:42] - test fold 3 - start training
+[2019-11-21 21:31:42] - test fold 3 - end training - score 7.726442237174307
+[2019-11-21 21:31:42] - test - end training cv
+[2019-11-21 21:31:42] - test - start predicting cv
+[2019-11-21 21:31:42] - test - start prediction fold:0
+[2019-11-21 21:31:42] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:31:42] - test - start prediction fold:1
+[2019-11-21 21:31:42] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:31:42] - test - start prediction fold:2
+[2019-11-21 21:31:42] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:31:42] - test - start prediction fold:3
+[2019-11-21 21:31:42] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:31:42] - test - end prediction cv
+[2019-11-21 21:31:42] - test - start predicting cv
+[2019-11-21 21:31:42] - test - start prediction fold:0
+[2019-11-21 21:31:42] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:31:42] - test - start prediction fold:1
+[2019-11-21 21:31:42] - test - end prediction fold:1 - score 26.052553231326282
+[2019-11-21 21:31:42] - test - start prediction fold:2
+[2019-11-21 21:31:42] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:31:42] - test - start prediction fold:3
+[2019-11-21 21:31:42] - test - end prediction fold:3 - score 25.403525067948166
+[2019-11-21 21:31:42] - test - end prediction cv
+[2019-11-21 21:32:05] - test - start training cv
+[2019-11-21 21:32:05] - test fold 0 - start training
+[2019-11-21 21:32:05] - test fold 0 - end training - score 15.623294048630491
+[2019-11-21 21:32:05] - test fold 1 - start training
+[2019-11-21 21:32:05] - test fold 1 - end training - score 16.16612597222972
+[2019-11-21 21:32:05] - test fold 2 - start training
+[2019-11-21 21:32:06] - test fold 2 - end training - score 10.712363002305274
+[2019-11-21 21:32:06] - test fold 3 - start training
+[2019-11-21 21:32:06] - test fold 3 - end training - score 7.70860400546741
+[2019-11-21 21:32:06] - test - end training cv
+[2019-11-21 21:32:06] - test - start predicting cv
+[2019-11-21 21:32:06] - test - start prediction fold:0
+[2019-11-21 21:32:06] - test - end prediction fold:0 - score 23.743455206078043
+[2019-11-21 21:32:06] - test - start prediction fold:1
+[2019-11-21 21:32:06] - test - end prediction fold:1 - score 23.812733174708217
+[2019-11-21 21:32:06] - test - start prediction fold:2
+[2019-11-21 21:32:06] - test - end prediction fold:2 - score 24.474760363178902
+[2019-11-21 21:32:06] - test - start prediction fold:3
+[2019-11-21 21:32:06] - test - end prediction fold:3 - score 23.346319095239934
+[2019-11-21 21:32:06] - test - end prediction cv
+[2019-11-21 21:32:06] - test - start predicting cv
+[2019-11-21 21:32:06] - test - start prediction fold:0
+[2019-11-21 21:32:06] - test - end prediction fold:0 - score 23.743455206078043
+[2019-11-21 21:32:06] - test - start prediction fold:1
+[2019-11-21 21:32:06] - test - end prediction fold:1 - score 23.812733174708217
+[2019-11-21 21:32:06] - test - start prediction fold:2
+[2019-11-21 21:32:06] - test - end prediction fold:2 - score 24.474760363178902
+[2019-11-21 21:32:06] - test - start prediction fold:3
+[2019-11-21 21:32:06] - test - end prediction fold:3 - score 23.346319095239934
+[2019-11-21 21:32:06] - test - end prediction cv
+[2019-11-21 21:33:24] - test - start training cv
+[2019-11-21 21:33:24] - test fold 0 - start training
+[2019-11-21 21:33:24] - test fold 0 - end training - score 15.623294048630491
+[2019-11-21 21:33:24] - test fold 1 - start training
+[2019-11-21 21:33:24] - test fold 1 - end training - score 16.16612597222972
+[2019-11-21 21:33:24] - test fold 2 - start training
+[2019-11-21 21:33:25] - test fold 2 - end training - score 10.712363002305274
+[2019-11-21 21:33:25] - test fold 3 - start training
+[2019-11-21 21:33:25] - test fold 3 - end training - score 7.70860400546741
+[2019-11-21 21:33:25] - test - end training cv
+[2019-11-21 21:33:25] - test - start predicting cv
+[2019-11-21 21:33:25] - test - start prediction fold:0
+[2019-11-21 21:33:25] - test - end prediction fold:0 - score 23.743455206078043
+[2019-11-21 21:33:25] - test - start prediction fold:1
+[2019-11-21 21:33:25] - test - end prediction fold:1 - score 23.812733174708217
+[2019-11-21 21:33:25] - test - start prediction fold:2
+[2019-11-21 21:33:25] - test - end prediction fold:2 - score 24.474760363178902
+[2019-11-21 21:33:25] - test - start prediction fold:3
+[2019-11-21 21:33:25] - test - end prediction fold:3 - score 23.346319095239934
+[2019-11-21 21:33:25] - test - end prediction cv
+[2019-11-21 21:33:25] - test - start predicting cv
+[2019-11-21 21:33:25] - test - start prediction fold:0
+[2019-11-21 21:33:25] - test - end prediction fold:0 - score 23.743455206078043
+[2019-11-21 21:33:25] - test - start prediction fold:1
+[2019-11-21 21:33:25] - test - end prediction fold:1 - score 23.812733174708217
+[2019-11-21 21:33:25] - test - start prediction fold:2
+[2019-11-21 21:33:25] - test - end prediction fold:2 - score 24.474760363178902
+[2019-11-21 21:33:25] - test - start prediction fold:3
+[2019-11-21 21:33:25] - test - end prediction fold:3 - score 23.346319095239934
+[2019-11-21 21:33:25] - test - end prediction cv
+[2019-11-21 21:33:46] - test - start training cv
+[2019-11-21 21:33:46] - test fold 0 - start training
+[2019-11-21 21:33:46] - test fold 0 - end training - score 15.03058526035946
+[2019-11-21 21:33:46] - test fold 1 - start training
+[2019-11-21 21:33:46] - test fold 1 - end training - score 16.133807042721596
+[2019-11-21 21:33:46] - test fold 2 - start training
+[2019-11-21 21:33:46] - test fold 2 - end training - score 10.534018504683909
+[2019-11-21 21:33:46] - test fold 3 - start training
+[2019-11-21 21:33:46] - test fold 3 - end training - score 7.422536575689065
+[2019-11-21 21:33:46] - test - end training cv
+[2019-11-21 21:33:46] - test - start predicting cv
+[2019-11-21 21:33:46] - test - start prediction fold:0
+[2019-11-21 21:33:46] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:33:46] - test - start prediction fold:1
+[2019-11-21 21:33:46] - test - end prediction fold:1 - score 23.81013395375724
+[2019-11-21 21:33:46] - test - start prediction fold:2
+[2019-11-21 21:33:46] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:33:46] - test - start prediction fold:3
+[2019-11-21 21:33:46] - test - end prediction fold:3 - score 23.822961404437656
+[2019-11-21 21:33:46] - test - end prediction cv
+[2019-11-21 21:33:46] - test - start predicting cv
+[2019-11-21 21:33:46] - test - start prediction fold:0
+[2019-11-21 21:33:46] - test - end prediction fold:0 - score 25.129285765610472
+[2019-11-21 21:33:46] - test - start prediction fold:1
+[2019-11-21 21:33:46] - test - end prediction fold:1 - score 23.81013395375724
+[2019-11-21 21:33:46] - test - start prediction fold:2
+[2019-11-21 21:33:46] - test - end prediction fold:2 - score 24.60836821015048
+[2019-11-21 21:33:46] - test - start prediction fold:3
+[2019-11-21 21:33:46] - test - end prediction fold:3 - score 23.822961404437656
+[2019-11-21 21:33:46] - test - end prediction cv

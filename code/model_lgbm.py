@@ -15,7 +15,12 @@ class ModelLGBM(Model):
 
     # 学習
     if validation:
-      early_stopping_rounds = params.pop('early_stopping_rounds')
+      early_rounds = params.pop('early_stopping_rounds')
+      if 'verbose_early' in params:
+        verbose_early = params.pop('verbose_early')
+      else:
+        verbose_early = 1
+      early_stopping = lgb.early_stopping(early_rounds, verbose=verbose_early)
       if 'verbose_eval' in params:
         verbose_eval = params.pop('verbose_eval')
       else:
@@ -26,7 +31,7 @@ class ModelLGBM(Model):
           num_boost_round=num_round,
           valid_sets=dvalid,
           verbose_eval=verbose_eval,
-          early_stopping_rounds=early_stopping_rounds)
+          callbacks=[early_stopping])
     else:
       self.model = lgb.train(params, dtrain)
 

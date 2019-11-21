@@ -12,7 +12,7 @@ class Util:
 
   @classmethod
   def dump_feature(cls, value, name):
-    cls.dump(value, './../input/' + name + '.pkl')
+    cls.dump(value, './../features/' + name + '.pkl')
 
   @classmethod
   def load(cls, path):
@@ -20,7 +20,7 @@ class Util:
 
   @classmethod
   def load_feature(cls, name):
-    return cls.load('./../input/' + name + '.pkl')
+    return cls.load('./../features/' + name + '.pkl')
 
   @classmethod
   def reduce_mem_usage(df, logger=None, level=logging.DEBUG):
@@ -97,4 +97,4 @@ class Logger:
     return str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
   def to_ltsv(self, dic):
-    return '\t'.join(['{}:{}'.format(key, value) for key, value in dic.items()])
+    return '\n\t'.join(['{}:{}'.format(key, value) for key, value in dic.items()])
