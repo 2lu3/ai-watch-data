@@ -30,8 +30,10 @@ train_years = [
     ]
 test_years = [2018, 2019]
 
+dataset = Dataset(features)
+dataset.add_past_day_data([i for i in range(1, 4)])
 
-runner = Runner('test', ModelLGBM, features, train_years, test_years, prms)
+runner = Runner('test', ModelLGBM, dataset, train_years, test_years, prms)
 
 runner.run_train_cv()
 runner.run_predict_cv()
@@ -40,4 +42,4 @@ pred, correct,_ = runner.get_predict_cv()
 plt.figure(figsize=(30, 30))
 plt.plot(pred, color='r')
 plt.plot(correct.values, color='black')
-plt.show()
+#plt.show()

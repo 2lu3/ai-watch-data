@@ -2,30 +2,32 @@ import pandas as pd
 from util import Util
 import pathlib
 import glob
+from typing import Union
 
 # 指定した条件のPdを返す
 class Dataset:
 
-  def __init__(self, feature_names):
+  def __init__(self, feature_names, target_name='target', train_years=None, test_years=None, cities = None):
+    # 目的変数名
+    self.target_name = target_name
 
-    if len(feature_names) == 0:
-      self.dataset = pd.DataFrame()
-      return
+    self.train_years = train_years
+    self.test_years = test_years
+    self.cities = cities
 
     # Datasetの中でのみ使用するカラム
-    self.local_feature_names =['県名', 'date']
-    for name in self.local_feature_names:
-      if name in feature_names:
-        self.local_feature_names.remove(name)
-      else:
-        feature_names.append(name)
+    self.secret_feature_names =['県名', 'date']
+    self.feature_names = feature_names.copy()
 
-    if 'target' not in feature_names:
-      feature_names.append('target')
+    for name in self.secret_feature_names:
+      if name in feature_names:
+        self.secret_feature_names.remove(name)
+      else:
+        self.feature_names.append(name)
 
     base_dataset = Util.load_feature('basic_data')
     datasets_list = []
-    for name in feature_names:
+    for name in self.feature_names:
       if name in base_dataset.columns:
         datasets_list.append(base_dataset[name])
       else:
@@ -81,15 +83,34 @@ class Dataset:
   def get_data(self, year, city):
     data = self.__select_by_year(year)
     data = self.__select_by_city(city, data)
-    data = data.drop(self.local_feature_names, axis=1)
-    data = data.dropna(subset=['target'])
+    data = data.drop(self.secret_feature_names, axis=1)
+    data = data.dropna(subset=[self.target_name])
     data = data.dropna()
     return data
 
   # 2008 ~ 2017年度のデータ
   def get_train(self):
-    return self.get_data([y for y in range(2008, 2018)], 'tokyo')
+    if self.train_years is not None and self.cities is not None:
+      return self.get_data(self.train_years, self.cities)
+    else:
+      return self.get_data([y for y in range(2008, 2018)], 'tokyo')
 
   # 2018, 2019年度のデータ
   def get_test(self, option=None):
-    return self.get_data([2018, 2019], 'tokyo')
+    if self.test_years is not None and self.cities is not None:
+      return self.get_data(self.test_years, self.cities)
+    else:
+      return self.get_data([2018, 2019], 'tokyo')
+
+  def add_past_day_data(self, days_ago, features = None):
+    if features is None:
+      features = list(self.dataset.columns.copy())
+    for name in self.secret_feature_names:
+      features.remove(name)
+
+    if type(days_ago) == int:
+      days_ago = [days_ago]
+
+    for i in days_ago:
+      for name in features:
+        self.dataset['p' + str(i) + name] = self.dataset[name].shift(-i)

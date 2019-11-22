@@ -12,23 +12,21 @@ logger = Logger()
 class Runner:
 
   def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model],
-      features: List[str], train_years: list, test_years, prms: dict, n_fold=None):
+      dataset, train_years: list, test_years, prms: dict, n_fold=None):
     """ コンストラクタ
 
     :param run_name: ランの名前
     :param model_cls: モデルのクラス
-    :param features: 特徴量のリスト
     :param params: ハイパーパラメーター
     """
     self.run_name = run_name
     self.model_cls = model_cls
-    self.features = features
     self.train_years = train_years
     self.params = prms
     if n_fold is None:
       n_fold = len(self.train_years)
     self.n_fold = n_fold
-    self.dataset = Dataset(self.features)
+    self.dataset = dataset
 
 
   def train_fold(self, i_fold: Union[str, int]) -> Tuple[
@@ -79,11 +77,7 @@ class Runner:
       model.train(train_x, train_y)
       return model, None, None, None
 
-  def run_train_cv(self) -> None:
-    """ cvでの学習・評価を行う
-
-    学習・評価とともに、各foldのモデルの保存、スコアのログ出力についても行う
-    """
+  def get_train_cv(self):
     logger.info(f'{self.run_name} - start training cv')
 
     scores = []
@@ -91,8 +85,6 @@ class Runner:
     preds = []
 
     # 各foldで学習を行う
-    print(type(self.n_fold))
-    print(self.n_fold)
     for i_fold in range(self.n_fold):
       logger.info(f'{self.run_name} fold {i_fold} - start training')
       model, va_idx, va_pred, score = self.train_fold(i_fold)
@@ -112,15 +104,24 @@ class Runner:
     preds = np.concatenate(preds, axis=0)
     preds = preds[order]
 
+    logger.info(f'{self.run_name} - end training cv')
+    return preds, scores
+
+
+  def run_train_cv(self) -> None:
+    """ cvでの学習・評価を行う
+
+    学習・評価とともに、各foldのモデルの保存、スコアのログ出力についても行う
+    """
+    preds, scores = self.get_train_cv()
     # 予測結果の保存
     Util.dump(preds, f'../model/pred/{self.run_name}-train.pkl')
 
     # 評価結果の保存
     logger.result_scores(self.run_name, scores)
 
-    logger.info(f'{self.run_name} - end training cv')
 
-  def get_predict_cv(self) -> [np.array, pd.DataFrame]:
+  def get_predict_cv(self):
     """ cvで学習した各foldのモデルの平均により、テストデータの予測を行う
 
     あらかじめ、run_train_cvを実行しておく必要がある
