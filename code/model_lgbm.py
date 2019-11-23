@@ -5,6 +5,7 @@ import os
 
 class ModelLGBM(Model):
   def train(self, tr_X, tr_Y, va_X=None, va_Y=None):
+    self.lgb = lgb
     validation = va_X is not None
     dtrain = lgb.Dataset(tr_X, label=tr_Y)
     if validation:
