@@ -12,7 +12,7 @@ logger = Logger()
 class Runner:
 
   def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model],
-      dataset, train_years: list, test_years, prms: dict, n_fold=None):
+      dataset, train_years: list, test_years: list, prms: dict, n_fold=None):
     """ コンストラクタ
 
     :param run_name: ランの名前

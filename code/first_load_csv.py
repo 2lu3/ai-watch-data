@@ -3,15 +3,6 @@ import pandas as pd
 import re
 from util import Util
 
-if __name__ == '__main__':
-  merge_method = [['tokyo'], [y for y in range(2008, 2019)], [5,9]]
-  dataset = BasicDataset(root_dir, merge_method)
-  data = dataset.get_data()
-
-  #data = data.drop(['天気概況(夜)', '天気概況'
-
-  Util.dump_feature(data, 'basic_data')
-
 def save_pickle_from_csv(root_dir='./../input/'):
   merge_method = [['tokyo'], [y for y in range(2008, 2019)], [5,9]]
   dataset = BasicDataset(root_dir, merge_method)
@@ -151,4 +142,11 @@ class BasicDataset():
       print(data_pd.info())
 
     return data_pd
+
+if __name__ == '__main__':
+  merge_method = [['tokyo'], [y for y in range(2008, 2019)], [5,9]]
+  dataset = BasicDataset('./../input/', merge_method)
+  data = dataset.get_data()
+  #data = data.drop(['天気概況(夜)', '天気概況'
+  Util.dump_feature(data, 'basic_data')
 

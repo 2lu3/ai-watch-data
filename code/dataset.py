@@ -45,7 +45,7 @@ class Dataset:
       file_name = globbed_file.name
       if file_name == 'basic_data.pkl':
         continue
-      data.append(Util.load_feature(file_name))
+      data.append(Util.load_feature(file_name[:-4]))
     data = basic_data.join(data, how='outer')
     return data.columns
 
