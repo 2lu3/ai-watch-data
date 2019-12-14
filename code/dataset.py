@@ -8,6 +8,8 @@ from typing import Union
 class Dataset:
 
   def __init__(self, feature_names, target_name='target', train_years=None, test_years=None, cities = None):
+    if feature_names is None:
+      feature_names = self.get_all_feature_names()
     # 目的変数名
     self.target_name = target_name
 
