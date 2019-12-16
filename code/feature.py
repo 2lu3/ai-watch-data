@@ -15,10 +15,12 @@ class Feature():
   def get_dataset(self):
     return self.data.copy()
 
-  def register_feature(self, feature, feature_name, description):
+  def register_feature(self, feature, feature_name):
     Util.dump_feature(feature, feature_name)
 
   def standarlization(self):
-    self.data = ((self.data - self.data.mean())
-        / self.data.std(ddof=0))
+    for name in self.data.columns:
+      if self.data[name][0] is int or self.data[name][0] is float:
+        self.data[name] = ((self.data[name] - self.data[name].mean())
+            / self.data[name].std(ddof=0))
 
