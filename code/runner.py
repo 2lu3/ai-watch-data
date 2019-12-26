@@ -11,8 +11,14 @@ logger = Logger()
 # クロスバリデーションを含めた学習・評価・予測
 class Runner:
 
-  def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model],
-      dataset, train_years: list, test_years: list, prms: dict, n_fold=None):
+  def __init__(self,
+      run_name: str,
+      model_cls: Callable[[str, dict], Model],
+      features,
+      train_years: list,
+      test_years: list,
+      prms: dict,
+      n_fold=None):
     """ コンストラクタ
 
     :param run_name: ランの名前
