@@ -11,28 +11,34 @@ logger = Logger()
 # クロスバリデーションを含めた学習・評価・予測
 class Runner:
 
-  def __init__(self,
+  def __init__(
+      self,
       run_name: str,
       model_cls: Callable[[str, dict], Model],
       features,
-      train_years: list,
-      test_years: list,
       prms: dict,
-      n_fold=None):
+      ):
     """ コンストラクタ
 
-    :param run_name: ランの名前
-    :param model_cls: モデルのクラス
-    :param params: ハイパーパラメーター
+    :run_name: ランの名前
+    :model_cls: モデルのクラス
+    :features: 特徴
+    :param params: パラメーター
     """
     self.run_name = run_name
     self.model_cls = model_cls
-    self.train_years = train_years
+    self.features = features
+    self.dataset = Dataset(features)
+
+    self.cv = prms.pop('cv')
+    if self.cv == 'None':
+      # no cv
+      self.train_years = prms.pop('train_years')
+      self.test_years = prms.pop('test_years')
+    else:
+      # todo: write
+      pass
     self.params = prms
-    if n_fold is None:
-      n_fold = len(self.train_years)
-    self.n_fold = n_fold
-    self.dataset = dataset
 
 
   def train_fold(self, i_fold: Union[str, int]) -> Tuple[
