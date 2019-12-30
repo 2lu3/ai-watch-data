@@ -28,17 +28,32 @@ class Runner:
     self.run_name = run_name
     self.model_cls = model_cls
     self.features = features
-    self.dataset = Dataset(features)
 
+    # predict value
+    target_name = cv.pop('target')
+    self.dataset = Dataset(features, target_name)
+
+    self.cities = prms.pop('cities')
     self.cv = prms.pop('cv')
     if self.cv == 'None':
       # no cv
       self.train_years = prms.pop('train_years')
       self.test_years = prms.pop('test_years')
     else:
-      # todo: write
+      # TODO write
       pass
     self.params = prms
+  def get_train_data():
+    self.dataset.get_data(self.train_years, self.cities
+  def get_valid_data():
+    pass
+  def get_test_data():
+    pass
+  def run():
+    if self.cv == 'None':
+
+    else:
+      # TODO: write
 
 
   def train_fold(self, i_fold: Union[str, int]) -> Tuple[
