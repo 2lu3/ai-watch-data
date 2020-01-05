@@ -1,14 +1,10 @@
-from typing import Callable, List, Optional, Tuple, Union
+from typing import Callable
 
-import numpy as np
-import pandas as pd
 from sklearn.metrics import mean_absolute_error
 
 from dataset import Dataset
 from model import Model
-from util import Logger, Util
-
-logger = Logger()
+from util import Logger
 
 # クロスバリデーションを含めた学習・評価・予測
 
@@ -18,7 +14,7 @@ class Runner:
         self,
         run_name: str,
         model_cls: Callable[[str, dict], Model],
-        features,
+        features: dict,
         prms: dict,
     ):
         """ コンストラクタ
