@@ -1,6 +1,6 @@
 from dataset import Dataset
 from runner import Runner
-from model_lgbm import ModelLGBM
+from model_lgb import ModelLGB
 import matplotlib.pyplot as plt
 
 features = [

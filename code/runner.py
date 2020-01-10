@@ -1,3 +1,4 @@
+""" Copyright 2lu3  """
 from typing import Callable
 
 from sklearn.metrics import mean_absolute_error
@@ -26,7 +27,7 @@ class Runner:
             :target: 予測するカラム名
             :cities: データで使用する県
             :cv: クロスバリデーションの方法
-                :none: CVなし。訓練、バリデーションは手動指定
+                :manual: CVなし。訓練、バリデーションは手動指定
                 :no valid: CVなし。訓練データは手動指定、バリデーションもなし
             :その他: LightGBMやXGBoostなどのパラメーターとして使用する
         """
@@ -40,7 +41,7 @@ class Runner:
         self.cities = prms.pop("cities")
 
         self.cv = prms.pop("cv")
-        if self.cv == "none" or self.cv == "no valid":
+        if self.cv == "manual" or self.cv == "no valid":
             # no cv
             self.train_years = prms.pop("train_years")
             self.test_years = prms.pop("test_years")
@@ -79,7 +80,7 @@ class Runner:
         return model, score
 
     def run(self):
-        if self.cv == "none" or self.cv == "no valid":
+        if self.cv == "manual" or self.cv == "no valid":
             train_data = self.get_train_data()
             test_data = self.get_test_data()
             if self.cv == "no valid":
