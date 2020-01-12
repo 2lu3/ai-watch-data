@@ -1,21 +1,19 @@
 """ Copyright 2lu3  """
 from typing import Callable
 
+from dataset import Dataset
+
+from model import Model
+
 from sklearn.metrics import mean_absolute_error
 
-from dataset import Dataset
-from model import Model
-from model_lgb import ModelLGB
-from util import Logger
 
 # クロスバリデーションを含めた学習・評価・予測
-
-
 class Runner:
     def __init__(
         self,
         run_name: str,
-        model_cls: Calable[[str, dict], Model],
+        model_cls: Callable[[str, dict], Model],
         features: dict,
         prms: dict,
     ):
@@ -43,11 +41,11 @@ class Runner:
 
         self.cv = prms.pop("cv")
 
-        if self.cv == "manual": # 手動指定
+        if self.cv == "manual":  # 手動指定
             self.train_years = prms.pop("train_years")
             self.valid_years = prms.pop("valid_years")
             self.test_years = prms.pop("test_years")
-        elif self.cv == 'no valid': # validationなし
+        elif self.cv == "no valid":  # validationなし
             self.train_years = prms.pop("train_years")
             self.valid_years = None
             self.test_years = prms.pop("test_years")
@@ -59,24 +57,17 @@ class Runner:
         # データセットの作成
         self.dataset = Dataset(features, self.target_name)
 
-    def train_fold(self, train_data, valid_data=None, i_fold=None):
+    def train(self, tr_X, tr_Y, va_X=None, va_Y=None, i_fold=None):
         """
-        input : train, valid data
+        input : train data, valid data
         output : model, score
         """
-        # dataset
-        tr_X, tr_Y = self.split_target_column(train_data)
-
-        va_X = va_Y = None
-        if valid_data is not None:
-            va_X, va_Y = self.split_target_column(valid_data)
-
         # train
-        model = self.build_model(i_fold)
+        model = self.__build_model(i_fold)
         model.train(tr_X, tr_Y, va_X, va_Y)
 
         # evaluate score of validation
-        if valid_data is not None:
+        if va_X is not None:
             va_pred = model.predict(va_X)
             score = mean_absolute_error(va_Y, va_pred)
         else:
@@ -85,34 +76,31 @@ class Runner:
 
     def run(self):
         if self.cv == "manual":
-            train_data = self.get_train_data()
-            test_data = self.get_test_data()
-            valid_data = self.get_valid_data()
-        elif self.cv == 'no valid':
-            train_data = self.get_train_data()
-            test_data = self.get_test_data()
-            valid_data =  None
+            tr_X, tr_Y = self.__get_train_data()
+            va_X, va_Y = self.__get_valid_data()
+            te_X, te_Y = self.__get_test_data()
+        elif self.cv == "no valid":
+            tr_X, tr_Y = self.__get_train_data()
+            va_X = va_Y = None
+            te_X, te_Y = self.__get_test_data()
         else:
             # TODO: write
             pass
 
         # 訓練
-        model, valid_score = self.train_fold(train_data, valid_data)
+        model, valid_score = self.train(tr_X, tr_Y, va_X, va_Y)
 
         # 評価
-        test_score = self.evaluate(model, test_data)
+        test_score = self.evaluate(model, te_X, te_Y)
 
         return valid_score, test_score
 
-    def evaluate(self, model, dataset):
-        dataset.info()
-        X, Y = self.split_target_column(dataset)
-
+    def evaluate(self, model, X, Y):
         pred_y = model.predict(X)
 
         return mean_absolute_error(Y, pred_y)
 
-    def build_model(self, i_fold=None):
+    def __build_model(self, i_fold=None):
         """ cvでのfoldを指定し、モデルの作成を行う """
 
         if i_fold is None:
@@ -121,18 +109,19 @@ class Runner:
             run_fold_name = f"{self.run_name}-{i_fold}"
         return self.model_cls(run_fold_name, self.params)
 
-    def get_train_data(self):
-        return self.dataset.get_data(self.train_years, self.cities)
-
-    def get_valid_data(self):
-        return self.dataset.get_data(self.valid_years, self.cities)
-
-    def get_test_data(self):
-        return self.dataset.get_data(self.test_years, self.cities)
-
-    def split_target_column(self, dataset):
-        print(dataset.columns)
-        print(self.target_name)
+    def __split_x_y(self, dataset):
         Y = dataset[self.target_name]
         X = dataset.drop(self.target_name, axis=1)
         return X, Y
+
+    def __get_train_data(self):
+        return self.__split_x_y(
+                self.dataset.get_data(self.train_years, self.cities))
+
+    def __get_valid_data(self):
+        return self.__split_x_y(
+                self.dataset.get_data(self.valid_years, self.cities))
+
+    def __get_test_data(self):
+        return self.__split_x_y(
+                self.dataset.get_data(self.test_years, self.cities))
