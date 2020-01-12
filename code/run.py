@@ -1,12 +1,16 @@
 from dataset import Dataset
 from runner import Runner
-from model_lgbm import ModelLGBM
+from model_lgb import ModelLGB
 import matplotlib.pyplot as plt
 
+features = [
+    'target','最高気温', '平均気温', '最低気温', '平均湿度',
+    '平均現地気圧', '平均蒸気圧', '平均雲量', '平均風速', '日照時間']
+
 prms = {
+  # LightGBM
   'num_round': 10000,
   'early_stopping_rounds': 10,
-
   'task': 'train',
   'boosting_type': 'gbdt',
   'objective': 'regression',
@@ -16,24 +20,26 @@ prms = {
   'verbosity': -1,
   'verbose_eval': -1,
   'verbose_early': 0,
-}
-features = [
-    'target','最高気温', '平均気温', '最低気温', '平均湿度',
-    '平均現地気圧', '平均蒸気圧', '平均雲量', '平均風速', '日照時間']
 
-train_years = [
+  # years
+  'train_years': [
     #[2008, 2009],
     [2010, 2011],
     [2012, 2013],
     [2014, 2015],
     [2016, 2017],
-    ]
-test_years = [2018, 2019]
+    ],
+  'test_years': [
+    2018, 2019
+    ],
 
-dataset = Dataset(features)
-dataset.add_past_day_data([i for i in range(1, 4)])
+  # cv
+  'cv' : 'None',
+}
 
-runner = Runner('test', ModelLGBM, dataset, train_years, test_years, prms)
+train_years = test_years = [2018, 2019]
+
+runner = Runner('test', ModelLGBM, features, prms)
 
 runner.run_train_cv()
 runner.run_predict_cv()
