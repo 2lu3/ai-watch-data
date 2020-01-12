@@ -5,6 +5,7 @@ from sklearn.metrics import mean_absolute_error
 
 from dataset import Dataset
 from model import Model
+from model_lgb import ModelLGB
 from util import Logger
 
 # クロスバリデーションを含めた学習・評価・予測
@@ -14,7 +15,7 @@ class Runner:
     def __init__(
         self,
         run_name: str,
-        model_cls: Callable[[str, dict], Model],
+        model_cls: Calable[[str, dict], Model],
         features: dict,
         prms: dict,
     ):
@@ -41,12 +42,15 @@ class Runner:
         self.cities = prms.pop("cities")
 
         self.cv = prms.pop("cv")
-        if self.cv == "manual" or self.cv == "no valid":
-            # no cv
+
+        if self.cv == "manual": # 手動指定
             self.train_years = prms.pop("train_years")
+            self.valid_years = prms.pop("valid_years")
             self.test_years = prms.pop("test_years")
-            if self.cv != "no valid":
-                self.valid_years = prms.pop("valid_years")
+        elif self.cv == 'no valid': # validationなし
+            self.train_years = prms.pop("train_years")
+            self.valid_years = None
+            self.test_years = prms.pop("test_years")
         else:
             # TODO write
             pass
@@ -80,13 +84,14 @@ class Runner:
         return model, score
 
     def run(self):
-        if self.cv == "manual" or self.cv == "no valid":
+        if self.cv == "manual":
             train_data = self.get_train_data()
             test_data = self.get_test_data()
-            if self.cv == "no valid":
-                valid_data = self.get_valid_data()
-            else:
-                valid_data = None
+            valid_data = self.get_valid_data()
+        elif self.cv == 'no valid':
+            train_data = self.get_train_data()
+            test_data = self.get_test_data()
+            valid_data =  None
         else:
             # TODO: write
             pass
@@ -97,9 +102,10 @@ class Runner:
         # 評価
         test_score = self.evaluate(model, test_data)
 
-        return test_score
+        return valid_score, test_score
 
     def evaluate(self, model, dataset):
+        dataset.info()
         X, Y = self.split_target_column(dataset)
 
         pred_y = model.predict(X)
@@ -125,6 +131,8 @@ class Runner:
         return self.dataset.get_data(self.test_years, self.cities)
 
     def split_target_column(self, dataset):
+        print(dataset.columns)
+        print(self.target_name)
         Y = dataset[self.target_name]
-        X = dataset.drop(self.target_name)
+        X = dataset.drop(self.target_name, axis=1)
         return X, Y

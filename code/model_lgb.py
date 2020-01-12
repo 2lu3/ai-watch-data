@@ -30,18 +30,15 @@ class ModelLGB(Model):
                                    dtrain,
                                    num_boost_round=num_round,
                                    valid_sets=dvalid,
-                                   verbose_eval=verbose_eval,
-                                   early_stopping_round=early_rounds)
-            model_array.append(self.model)
+                                   verbose_eval=verbose,
+                                   early_stopping_rounds=early_rounds)
         else:
             watchlist = [(dtrain, 'train')]
             self.model = lgb.train(
                 params,
                 dtrain,
                 num_boost_round=num_round,
-                evals=watchlist
             )
-            model_array.append(self.model)
 
     def predict(self, te_X):
         return self.model.predict(te_X, num_iteration=self.model.best_iteration)
@@ -55,11 +52,12 @@ class ModelLGB(Model):
 
     def save_model(self):
         here = os.path.dirname(__file__)
-        model_path = os.path.join('here' + '../model/model',
+        model_path = os.path.join(here + '../model/model',
                                   f'{self.run_hold_name}.lgbm')
         Util.dump(self.model, model_path)
 
     def load_model(self):
-        model_path = os.path.join(
-            '../model/model', f'{self.run_hold_name}.lgbm')
+        here = os.path.dirname(__file__)
+        model_path = os.path.join(here + '../model/model',
+                f'{self.run_hold_name}.lgbm')
         self.model = Util.load(model_path)
