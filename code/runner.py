@@ -1,7 +1,6 @@
-""" Copyright 2lu3  """
-from dataset import Dataset
-
 from sklearn.metrics import mean_absolute_error
+
+from dataset import Dataset
 
 
 # クロスバリデーションを含めた学習・評価・予測
