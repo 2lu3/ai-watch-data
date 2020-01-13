@@ -1,22 +1,12 @@
 """ Copyright 2lu3  """
-from typing import Callable
-
 from dataset import Dataset
-
-from model import Model
 
 from sklearn.metrics import mean_absolute_error
 
 
 # クロスバリデーションを含めた学習・評価・予測
 class Runner:
-    def __init__(
-        self,
-        run_name: str,
-        model_cls: Callable[[str, dict], Model],
-        features: dict,
-        prms: dict,
-    ):
+    def __init__(self, **kwargs):
         """ コンストラクタ
 
         :run_name: ランの名前
@@ -30,11 +20,12 @@ class Runner:
                 :no valid: CVなし。訓練データは手動指定、バリデーションもなし
             :その他: LightGBMやXGBoostなどのパラメーターとして使用する
         """
-        self.run_name = run_name
-        self.model_cls = model_cls
-        self.features = features
+        self.run_name = kwargs.pop("run_name")
+        self.model_cls = kwargs.pop("model_cls")
+        self.features = kwargs.pop("features")
 
         # prms
+        prms = kwargs.pop("prms")
         self.target_name = prms.pop("target")
 
         self.cities = prms.pop("cities")
@@ -55,7 +46,7 @@ class Runner:
         self.params = prms
 
         # データセットの作成
-        self.dataset = Dataset(features, self.target_name)
+        self.dataset = Dataset(self.features, self.target_name)
 
     def train(self, tr_X, tr_Y, va_X=None, va_Y=None, i_fold=None):
         """
@@ -115,13 +106,13 @@ class Runner:
         return X, Y
 
     def __get_train_data(self):
-        return self.__split_x_y(
-                self.dataset.get_data(self.train_years, self.cities))
+        data = self.dataset.get_data(self.train_years, self.cities)
+        return self.__split_x_y(data)
 
     def __get_valid_data(self):
-        return self.__split_x_y(
-                self.dataset.get_data(self.valid_years, self.cities))
+        data = self.dataset.get_data(self.valid_years, self.cities)
+        return self.__split_x_y(data)
 
     def __get_test_data(self):
-        return self.__split_x_y(
-                self.dataset.get_data(self.test_years, self.cities))
+        data = self.dataset.get_data(self.test_years, self.cities)
+        return self.__split_x_y(data)
