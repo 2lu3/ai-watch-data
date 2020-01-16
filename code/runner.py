@@ -83,7 +83,7 @@ class Runner:
         self.model, valid_score = self.train(tr_X, tr_Y, va_X, va_Y)
 
         # 評価
-        test_score = self.evaluate(self.model, te_X, te_Y)
+        test_score, _, _ = self.evaluate(self.model, te_X, te_Y)
 
         self.model.save_model()
         return valid_score, test_score
@@ -91,7 +91,7 @@ class Runner:
     def evaluate(self, model, X, Y):
         pred_y = model.predict(X)
 
-        return mean_absolute_error(Y, pred_y)
+        return mean_absolute_error(Y, pred_y), pred_y, Y.values
 
     def __convert_featurename_to_number(self, df: pd.DataFrame) -> None:
         df_copy = df.copy()
@@ -104,6 +104,24 @@ class Runner:
         importance = self.model.feature_importance()
         plt.figure(figsize=(20, 10))
         plt.bar(feature_names, importance)
+        plt.show()
+
+    def plot_prediction(self, train=False, valid=False, test=True, figsize=(20, 10)):
+        if train + valid + test != 1:
+            print('Only one dataset could be choosed to plot')
+        if train is True:
+            x, y = self.__get_train_data()
+            _, pred_y, correct_y = self.evaluate(self.model, x, y)
+        elif valid is True:
+            x, y = self.__get_valid_data()
+            _, pred_y, correct_y = self.evaluate(self.model, x, y)
+        elif test is True:
+            x, y = self.__get_test_data()
+            _, pred_y, correct_y = self.evaluate(self.model, x, y)
+        plt.figure(figsize=figsize)
+        plt.plot(pred_y, color='r')
+        plt.plot(correct_y, color='k')
+        plt.legend(['prediction', 'correct'])
         plt.show()
 
     def __build_model(self, i_fold=None):
