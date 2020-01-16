@@ -42,12 +42,16 @@ class ModelLGB(Model):
 
     def save_model(self):
         here = os.path.dirname(__file__)
-        model_path = os.path.join(here + "/../model/model", f"{self.run_hold_name}.lgbm")
+        model_path = os.path.join(
+            here + "/../model/model", f"{self.run_hold_name}.lgbm"
+        )
         Util.dump(self.model, model_path)
 
     def load_model(self):
         here = os.path.dirname(__file__)
-        model_path = os.path.join(here + "/../model/model", f"{self.run_hold_name}.lgbm")
+        model_path = os.path.join(
+            here + "/../model/model", f"{self.run_hold_name}.lgbm"
+        )
         self.model = Util.load(model_path)
 
     def feature_importance(self):

@@ -1,6 +1,6 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
-import matplotlib.pyplot as plt
 
 from dataset import Dataset
 
@@ -10,10 +10,10 @@ class Runner:
     def __init__(self, **kwargs):
         """ コンストラクタ
 
-        :run_name: ランの名前
-        :model_cls: モデルのクラス
-        :features: 特徴
-        :param: パラメーター
+        :run_name str: ランの名前
+        :model_cls model: モデルのクラス
+        :features list: 特徴
+        :param dict: パラメーター
             :target: 予測するカラム名
             :cities: データで使用する県
             :cv: クロスバリデーションの方法
@@ -93,6 +93,11 @@ class Runner:
 
         return mean_absolute_error(Y, pred_y)
 
+    def __convert_featurename_to_number(self, df: pd.DataFrame) -> None:
+        df_copy = df.copy()
+        df_copy.columns = [str(i) for i in range(len(df.columns))]
+        return df_copy
+
     def feature_importance(self):
         feature_names = self.features.copy()
         feature_names.remove(self.target_name)
@@ -111,18 +116,22 @@ class Runner:
         return self.model_cls(run_fold_name, self.params)
 
     def __split_x_y(self, dataset):
-        Y = dataset[self.target_name]
-        X = dataset.drop(self.target_name, axis=1)
+        target_index = str(self.features.index(self.target_name))
+        Y = dataset[target_index]
+        X = dataset.drop(target_index, axis=1)
         return X, Y
 
     def __get_train_data(self):
         data = self.dataset.get_data(self.train_years, self.cities)
+        data = self.__convert_featurename_to_number(data)
         return self.__split_x_y(data)
 
     def __get_valid_data(self):
         data = self.dataset.get_data(self.valid_years, self.cities)
+        data = self.__convert_featurename_to_number(data)
         return self.__split_x_y(data)
 
     def __get_test_data(self):
         data = self.dataset.get_data(self.test_years, self.cities)
+        data = self.__convert_featurename_to_number(data)
         return self.__split_x_y(data)
