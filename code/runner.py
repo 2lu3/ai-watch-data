@@ -1,4 +1,6 @@
+import pandas as pd
 from sklearn.metrics import mean_absolute_error
+import matplotlib.pyplot as plt
 
 from dataset import Dataset
 
@@ -24,7 +26,7 @@ class Runner:
         self.features = kwargs.pop("features")
 
         # prms
-        prms = kwargs.pop("prms")
+        prms = kwargs.pop("prms").copy()
         self.target_name = prms.pop("target")
 
         self.cities = prms.pop("cities")
@@ -78,17 +80,26 @@ class Runner:
             pass
 
         # 訓練
-        model, valid_score = self.train(tr_X, tr_Y, va_X, va_Y)
+        self.model, valid_score = self.train(tr_X, tr_Y, va_X, va_Y)
 
         # 評価
-        test_score = self.evaluate(model, te_X, te_Y)
+        test_score = self.evaluate(self.model, te_X, te_Y)
 
+        self.model.save_model()
         return valid_score, test_score
 
     def evaluate(self, model, X, Y):
         pred_y = model.predict(X)
 
         return mean_absolute_error(Y, pred_y)
+
+    def feature_importance(self):
+        feature_names = self.features.copy()
+        feature_names.remove(self.target_name)
+        importance = self.model.feature_importance()
+        plt.figure(figsize=(20, 10))
+        plt.bar(feature_names, importance)
+        plt.show()
 
     def __build_model(self, i_fold=None):
         """ cvでのfoldを指定し、モデルの作成を行う """
