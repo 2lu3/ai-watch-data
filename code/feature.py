@@ -11,7 +11,7 @@ class Feature:
     def get_dataset(self):
         return self.data.copy()
 
-    def register_feature(self, feature, feature_name, feature_describe):
+    def register_feature(self, feature, feature_name):
         Util.dump_feature(feature, feature_name)
 
     def standarlization(self):

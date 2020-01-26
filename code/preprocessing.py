@@ -136,7 +136,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
         data_pd = data_pd.dropna()
 
         # 前日データを追加
-        if option["add_previous_day"] == True:
+        if option["add_previous_day"] is True:
             data_pd = addPreviousDayWeatherData(data_pd)
         return data_pd
 
@@ -200,7 +200,7 @@ def Preprocessing(datasets_origin, verbose, convert, option):
     datasets = [reduce_mem_usage(data) for data in datasets]
 
     # 標準化・正規化
-    if option["convert_data_range"] == True:
+    if option["convert_data_range"] is True:
         datasets = convertDataRange(datasets)
 
     # データを整理
@@ -215,16 +215,16 @@ def Preprocessing(datasets_origin, verbose, convert, option):
 
     # 人数をone-hotに
     split_num = option["split_num"]
-    if option["split_y"] == True:
+    if option["split_y"] is True:
         y_datas = [
             splitY(y_datas[i], split_num, dimension=option["dimension"])
             for i in range(len(y_datas))
         ]
 
-    if convert == True:
+    if convert is True:
         return x_datas, y_datas
     else:
-        return data_pd
+        return datasets
 
 
 # # use case
